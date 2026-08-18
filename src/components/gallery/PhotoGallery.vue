@@ -34,9 +34,9 @@
         <img :src="selectedPhoto.src" :alt="selectedPhoto.title" />
         <div class="photo-gallery__lightbox-info">
           <h3>{{ selectedPhoto.title }}</h3>
-          <p>Season: {{ selectedPhoto.season }}</p>
-          <p>Theme: {{ selectedPhoto.theme }}</p>
-          <p>Photographer: {{ selectedPhoto.photographer }}</p>
+          <p>季节：{{ selectedPhoto.season }}</p>
+          <p>主题：{{ selectedPhoto.theme }}</p>
+          <p>拍摄者：{{ selectedPhoto.photographer }}</p>
         </div>
       </div>
     </el-dialog>

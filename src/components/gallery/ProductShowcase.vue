@@ -25,7 +25,6 @@
         </div>
         <div class="product-showcase__body">
           <h4>{{ product.name }}</h4>
-          <p class="product-showcase__cn">{{ product.nameCN }}</p>
           <div class="product-showcase__price">
             {{ product.price }} <span>{{ product.unit }}</span>
           </div>
@@ -48,7 +47,6 @@
 
         <div class="product-showcase__detail-body">
           <h2>{{ selectedProduct.name }}</h2>
-          <p class="product-showcase__detail-cn">{{ selectedProduct.nameCN }}</p>
           <div class="product-showcase__detail-price">
             <span class="product-showcase__detail-amount">{{ selectedProduct.price }}</span>
             <span>{{ selectedProduct.unit }}</span>
@@ -57,7 +55,7 @@
 
           <p class="product-showcase__detail-desc">{{ selectedProduct.desc }}</p>
 
-          <h4>Key Features</h4>
+          <h4>产品特点</h4>
           <div class="product-showcase__detail-features">
             <span v-for="feature in selectedProduct.features" :key="feature" class="product-showcase__feature product-showcase__feature--lg">
               <el-icon><Check /></el-icon> {{ feature }}
@@ -65,8 +63,8 @@
           </div>
 
           <div class="product-showcase__packaging">
-            <h4>Packaging Design</h4>
-            <img :src="selectedProduct.packagingDesign" :alt="selectedProduct.name + ' packaging'" loading="lazy" />
+            <h4>包装设计方案</h4>
+            <img :src="selectedProduct.packagingDesign" :alt="selectedProduct.name + ' 包装设计'" loading="lazy" />
             <p>{{ selectedProduct.packagingDesc }}</p>
           </div>
         </div>

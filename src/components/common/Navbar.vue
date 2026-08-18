@@ -3,7 +3,7 @@
     <div class="navbar__container">
       <router-link to="/" class="navbar__logo">
         <span class="navbar__logo-icon">🌾</span>
-        <span class="navbar__logo-text">Jiangxiang Village</span>
+        <span class="navbar__logo-text">蒋巷村</span>
       </router-link>
 
       <ul class="navbar__menu" :class="{ 'navbar__menu--open': mobileMenuOpen }">
@@ -15,7 +15,7 @@
         </li>
       </ul>
 
-      <button class="navbar__toggle" @click="toggleMobileMenu" :aria-label="mobileMenuOpen ? 'Close menu' : 'Open menu'">
+      <button class="navbar__toggle" @click="toggleMobileMenu" :aria-label="mobileMenuOpen ? '关闭菜单' : '打开菜单'">
         <span :class="{ 'navbar__toggle-line--open': mobileMenuOpen }"></span>
         <span :class="{ 'navbar__toggle-line--open': mobileMenuOpen }"></span>
         <span :class="{ 'navbar__toggle-line--open': mobileMenuOpen }"></span>
@@ -35,11 +35,11 @@ const mobileMenuOpen = ref(false)
 const isHome = computed(() => route.path === '/')
 
 const navItems = [
-  { label: 'Home', path: '/', icon: 'HomeFilled' },
-  { label: 'Video', path: '/video', icon: 'VideoCamera' },
-  { label: 'Map', path: '/map', icon: 'MapLocation' },
-  { label: 'Village', path: '/village', icon: 'OfficeBuilding' },
-  { label: 'Features', path: '/features', icon: 'Star' }
+  { label: '首页', path: '/', icon: 'HomeFilled' },
+  { label: '宣传片', path: '/video', icon: 'VideoCamera' },
+  { label: '导览地图', path: '/map', icon: 'MapLocation' },
+  { label: '村庄介绍', path: '/village', icon: 'OfficeBuilding' },
+  { label: '特色展示', path: '/features', icon: 'Star' }
 ]
 
 const handleScroll = () => {

@@ -16,8 +16,8 @@
     </div>
 
     <div class="modern-value__path">
-      <h3 class="modern-value__path-title">Five-Stage Development Path</h3>
-      <p class="modern-value__path-subtitle">A model of "看得懂、学得会" (understandable and replicable) rural revitalization</p>
+      <h3 class="modern-value__path-title">五阶段发展路径</h3>
+      <p class="modern-value__path-subtitle">一个"看得懂、学得会"的乡村振兴范本</p>
       <div class="modern-value__path-grid">
         <div
           v-for="(stage, i) in overview.developmentPath"
@@ -29,7 +29,6 @@
             <el-icon :size="32"><component :is="stage.icon" /></el-icon>
           </div>
           <h4>{{ stage.title }}</h4>
-          <p class="modern-value__stage-cn">{{ stage.titleCN }}</p>
           <p class="modern-value__stage-desc">{{ stage.desc }}</p>
         </div>
       </div>
@@ -38,33 +37,33 @@
     <div class="modern-value__values">
       <div class="modern-value__value-card">
         <div class="modern-value__value-icon">🌱</div>
-        <h4>Ecological Civilization</h4>
-        <p>60%+ green coverage, zero-carbon solar village, circular economy with sewage treatment and straw gasification. "Environment is the root of the village."</p>
+        <h4>生态文明</h4>
+        <p>绿化覆盖率超60%，零碳光伏村庄，循环经济与污水处理系统并行。"环境是村子的根。"</p>
       </div>
       <div class="modern-value__value-card">
         <div class="modern-value__value-icon">🤝</div>
-        <h4>Common Prosperity</h4>
-        <p>All 192 households own villas. Per capita income of 62,500 yuan with 10,000 yuan annual dividends. Full five-insurance coverage. "No one left behind on the path to prosperity."</p>
+        <h4>共同富裕</h4>
+        <p>192户家家住别墅。人均收入62,500元，年均分红1万元。五险全覆盖。"共同富裕路上，绝不让一个人掉队。"</p>
       </div>
       <div class="modern-value__value-card">
         <div class="modern-value__value-icon">📚</div>
-        <h4>Spiritual Civilization</h4>
-        <p>Reading culture since 1997 with free newspaper subscriptions. Village conventions (18 articles, revised 6 times). "Enrich pockets, then enrich minds."</p>
+        <h4>精神文明</h4>
+        <p>1997年起成立农民读书协会，免费订阅报刊。村规民约18条，已修订6次。"富了口袋，还要富脑袋。"</p>
       </div>
       <div class="modern-value__value-card">
         <div class="modern-value__value-icon">🏛️</div>
-        <h4>Democratic Governance</h4>
-        <p>National democratic rule-of-law model village. Transparent village affairs, collective decision-making, and active civic participation in community management.</p>
+        <h4>民主治理</h4>
+        <p>全国民主法治示范村。村务公开透明，集体决策，村民积极参与社区管理。</p>
       </div>
       <div class="modern-value__value-card">
         <div class="modern-value__value-icon">⚡</div>
-        <h4>Zero-Carbon Future</h4>
-        <p>20,000 sqm of solar panels generating up to 100 million kWh annually. Reducing carbon emissions by 2,825 tons per year. A replicable green development path.</p>
+        <h4>零碳未来</h4>
+        <p>2万平方米光伏板，最高发电1亿千瓦时，年均减碳2825吨。探索可复制可推广的绿色发展之路。</p>
       </div>
       <div class="modern-value__value-card">
         <div class="modern-value__value-icon">👴</div>
-        <h4>Elderly Care Model</h4>
-        <p>158 free elderly apartments, 250-bed nursing home with integrated medical services. Monthly pensions of 600-2,300 yuan. National elder-friendly community.</p>
+        <h4>养老典范</h4>
+        <p>158套老年公寓免费入住，250床护理院医养结合。月领养老金600-2300元。全国老年友好型社区。</p>
       </div>
     </div>
   </div>

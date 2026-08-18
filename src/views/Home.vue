@@ -6,32 +6,31 @@
       </video>
       <div class="hero__overlay"></div>
       <div class="hero__content">
-        <p class="hero__tagline">Social Practice Project</p>
-        <h1 class="hero__title">Jiangxiang Village</h1>
-        <h2 class="hero__subtitle">蒋巷村 · A New Paradise in the Countryside</h2>
+        <p class="hero__tagline">六朝松小纵队 · 社会实践项目</p>
+        <h1 class="hero__title">蒋巷村</h1>
+        <h2 class="hero__subtitle">新时代的桃花源</h2>
         <p class="hero__desc">
-          From a disease-ridden swamp to a billion-yuan ecological community —
-          discover the Jiangxiang miracle of rural revitalization led by Chang Desheng.
+          从血吸虫病流行的穷乡僻壤到产值十亿的生态社区——探索常德盛带领下的蒋巷乡村振兴奇迹。
         </p>
         <div class="hero__actions">
           <router-link to="/video" class="hero__btn hero__btn--primary">
-            <el-icon><VideoCamera /></el-icon> Watch Video
+            <el-icon><VideoCamera /></el-icon> 观看宣传片
           </router-link>
           <router-link to="/village" class="hero__btn hero__btn--outline">
-            <el-icon><Reading /></el-icon> Explore Village
+            <el-icon><Reading /></el-icon> 走进蒋巷
           </router-link>
         </div>
       </div>
       <div class="hero__scroll">
-        <span>Scroll</span>
+        <span>向下滚动</span>
         <div class="hero__scroll-line"></div>
       </div>
     </section>
 
     <section class="overview section-padding">
       <div class="container">
-        <h2 class="section-title">Village at a Glance</h2>
-        <p class="section-subtitle">Jiangxiang Village, Zhitang Town, Changshu City, Jiangsu Province</p>
+        <h2 class="section-title">村庄概览</h2>
+        <p class="section-subtitle">江苏省常熟市支塘镇蒋巷村</p>
         <div class="overview__grid">
           <div v-for="stat in store.overview.stats" :key="stat.label" class="overview__card">
             <div class="overview__value">{{ stat.value }}<span>{{ stat.unit }}</span></div>
@@ -44,14 +43,13 @@
 
     <section class="path section-padding" style="background: #f0f9f4;">
       <div class="container">
-        <h2 class="section-title">Development Path</h2>
-        <p class="section-subtitle">Five stages of transformation — from poverty to prosperity</p>
+        <h2 class="section-title">发展路径</h2>
+        <p class="section-subtitle">五阶段蜕变——从贫困走向富裕</p>
         <div class="path__grid">
           <div v-for="(stage, i) in store.overview.developmentPath" :key="i" class="path__card">
             <div class="path__num">{{ i + 1 }}</div>
             <div class="path__icon"><el-icon :size="28"><component :is="stage.icon" /></el-icon></div>
             <h3>{{ stage.title }}</h3>
-            <p class="path__cn">{{ stage.titleCN }}</p>
             <p class="path__desc">{{ stage.desc }}</p>
           </div>
         </div>
@@ -60,8 +58,8 @@
 
     <section class="nav-cards section-padding">
       <div class="container">
-        <h2 class="section-title">Explore the Project</h2>
-        <p class="section-subtitle">Five sections covering all aspects of Jiangxiang Village</p>
+        <h2 class="section-title">探索项目</h2>
+        <p class="section-subtitle">五大板块，全方位展示蒋巷村</p>
         <div class="nav-cards__grid">
           <router-link v-for="card in navCards" :key="card.path" :to="card.path" class="nav-cards__card">
             <div class="nav-cards__icon"><el-icon :size="36"><component :is="card.icon" /></el-icon></div>
@@ -77,7 +75,7 @@
       <div class="container motto__container">
         <p class="motto__text">"{{ store.overview.motto }}"</p>
         <p class="motto__cn">{{ store.overview.mottoCN }}</p>
-        <p class="motto__author">— Chang Desheng, Village Party Secretary since 1966</p>
+        <p class="motto__author">— 蒋巷村党委第一书记 常德盛</p>
       </div>
     </section>
   </div>
@@ -89,10 +87,10 @@ import { useVillageStore } from '@/stores/village'
 const store = useVillageStore()
 
 const navCards = [
-  { path: '/video', title: 'Promotional Video', desc: 'Watch the social practice documentary and curated videos. Get embed codes for mini-programs.', icon: 'VideoCamera' },
-  { path: '/map', title: 'Tour Map', desc: 'Explore 12 landmarks on an interactive map — from the ecological park to organic rice fields.', icon: 'MapLocation' },
-  { path: '/village', title: 'Village Introduction', desc: 'Jiangxiang history timeline, nearly 100 honors, leadership visits, and modern values.', icon: 'OfficeBuilding' },
-  { path: '/features', title: 'Special Features', desc: 'Agricultural product showcase with packaging designs and seasonal photo gallery.', icon: 'Star' }
+  { path: '/video', title: '宣传片', desc: '观看社会实践纪录片和精选视频，获取小程序内嵌代码。', icon: 'VideoCamera' },
+  { path: '/map', title: '导览地图', desc: '在交互式地图上探索12个地标景点——从生态园到有机稻田。', icon: 'MapLocation' },
+  { path: '/village', title: '村庄介绍', desc: '蒋巷村史时间线、近百项荣誉、领导视察和现代价值。', icon: 'OfficeBuilding' },
+  { path: '/features', title: '特色展示', desc: '蒋巷特色农产品包装视觉方案和四季美景摄影图。', icon: 'Star' }
 ]
 </script>
 

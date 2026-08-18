@@ -6,13 +6,13 @@
         <h3 class="video-gallery__title">{{ currentVideo.title }}</h3>
         <p class="video-gallery__desc">{{ currentVideo.desc }}</p>
         <el-button type="primary" :icon="Share" @click="showEmbedDialog = true">
-          Get Embed Code
+          获取内嵌代码
         </el-button>
       </div>
     </div>
 
     <div class="video-gallery__list">
-      <h4 class="video-gallery__list-title">Playlist</h4>
+      <h4 class="video-gallery__list-title">播放列表</h4>
       <div class="video-gallery__cards">
         <div
           v-for="video in filteredVideos"
@@ -26,8 +26,8 @@
             <div class="video-gallery__thumb-overlay">
               <el-icon :size="32"><VideoPlay /></el-icon>
             </div>
-            <span class="video-gallery__badge" v-if="video.isLocal">Local</span>
-            <span class="video-gallery__badge video-gallery__badge--external" v-else>External</span>
+            <span class="video-gallery__badge" v-if="video.isLocal">本地</span>
+            <span class="video-gallery__badge video-gallery__badge--external" v-else>外部</span>
           </div>
           <div class="video-gallery__card-info">
             <h5>{{ video.title }}</h5>
@@ -37,17 +37,17 @@
       </div>
     </div>
 
-    <el-dialog v-model="showEmbedDialog" title="Embed Code for Mini Programs" width="600">
+    <el-dialog v-model="showEmbedDialog" title="小程序内嵌代码" width="600">
       <el-tabs v-model="embedTab">
-        <el-tab-pane label="Mini Program" name="miniprogram">
-          <p class="video-gallery__embed-note">Copy this embed code to use in WeChat Mini Programs. Replace VIDEO_URL and POSTER_URL with your hosted media URLs.</p>
+        <el-tab-pane label="微信小程序" name="miniprogram">
+          <p class="video-gallery__embed-note">复制以下内嵌代码用于微信小程序。请将 VIDEO_URL 替换为您托管的视频地址，POSTER_URL 替换为封面图地址。</p>
           <el-input v-model="miniProgramEmbed" type="textarea" :rows="4" readonly />
-          <el-button type="primary" :icon="CopyDocument" @click="copyToClipboard(miniProgramEmbed)" class="video-gallery__copy-btn">Copy Code</el-button>
+          <el-button type="primary" :icon="CopyDocument" @click="copyToClipboard(miniProgramEmbed)" class="video-gallery__copy-btn">复制代码</el-button>
         </el-tab-pane>
-        <el-tab-pane label="Web iframe" name="web">
-          <p class="video-gallery__embed-note">Embed code for web pages and blog posts.</p>
+        <el-tab-pane label="网页内嵌" name="web">
+          <p class="video-gallery__embed-note">用于网页和博客的内嵌代码。</p>
           <el-input v-model="webEmbed" type="textarea" :rows="4" readonly />
-          <el-button type="primary" :icon="CopyDocument" @click="copyToClipboard(webEmbed)" class="video-gallery__copy-btn">Copy Code</el-button>
+          <el-button type="primary" :icon="CopyDocument" @click="copyToClipboard(webEmbed)" class="video-gallery__copy-btn">复制代码</el-button>
         </el-tab-pane>
       </el-tabs>
     </el-dialog>
@@ -90,9 +90,9 @@ const webEmbed = computed(() =>
 const copyToClipboard = async (text) => {
   try {
     await navigator.clipboard.writeText(text)
-    ElMessage.success('Embed code copied to clipboard!')
+    ElMessage.success('内嵌代码已复制到剪贴板！')
   } catch {
-    ElMessage.error('Failed to copy. Please copy manually.')
+    ElMessage.error('复制失败，请手动复制。')
   }
 }
 </script>

@@ -5,31 +5,31 @@ const routes = [
     path: '/',
     name: 'home',
     component: () => import('@/views/Home.vue'),
-    meta: { title: 'Home' }
+    meta: { title: '首页' }
   },
   {
     path: '/video',
     name: 'video',
     component: () => import('@/views/PromotionalVideo.vue'),
-    meta: { title: 'Promotional Video' }
+    meta: { title: '宣传片' }
   },
   {
     path: '/map',
     name: 'map',
     component: () => import('@/views/TourMapPage.vue'),
-    meta: { title: 'Tour Map' }
+    meta: { title: '导览地图' }
   },
   {
     path: '/village',
     name: 'village',
     component: () => import('@/views/VillageIntro.vue'),
-    meta: { title: 'Village Introduction' }
+    meta: { title: '村庄介绍' }
   },
   {
     path: '/features',
     name: 'features',
     component: () => import('@/views/SpecialFeatures.vue'),
-    meta: { title: 'Special Features' }
+    meta: { title: '特色展示' }
   }
 ]
 
@@ -42,7 +42,7 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
-  document.title = to.meta.title ? `${to.meta.title} | Jiangxiang Village` : 'Jiangxiang Village'
+  document.title = to.meta.title ? `${to.meta.title} | 蒋巷村` : '蒋巷村'
 })
 
 export default router

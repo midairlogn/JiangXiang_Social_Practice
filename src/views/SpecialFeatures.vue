@@ -2,17 +2,17 @@
   <div class="features-page" style="padding-top: 64px;">
     <section class="features-page__header">
       <div class="container">
-        <h1 class="section-title">Special Features</h1>
-        <p class="section-subtitle">Agricultural products & seasonal photography gallery</p>
+        <h1 class="section-title">特色展示</h1>
+        <p class="section-subtitle">蒋巷特色农产品与四季美景摄影</p>
       </div>
     </section>
 
     <section class="features-page__content section-padding">
       <div class="container">
         <el-tabs v-model="activeTab" class="features-page__tabs">
-          <el-tab-pane label="Agricultural Products" name="products">
-            <h2 class="section-title">Product Showcase</h2>
-            <p class="section-subtitle">Featuring packaging design concepts for Jiangxiang specialty products</p>
+          <el-tab-pane label="农产品展示" name="products">
+            <h2 class="section-title">产品展示</h2>
+            <p class="section-subtitle">展示蒋巷特色农产品包装视觉方案</p>
             <ProductShowcase
               :products="store.allProducts"
               :categories="store.productCategoryList"
@@ -21,9 +21,9 @@
             />
           </el-tab-pane>
 
-          <el-tab-pane label="Photography Gallery" name="photos">
-            <h2 class="section-title">Scenery Photography</h2>
-            <p class="section-subtitle">Seasons & themes — people's life, scenery, labor, and the changing countryside</p>
+          <el-tab-pane label="美景摄影" name="photos">
+            <h2 class="section-title">美景摄影图</h2>
+            <p class="section-subtitle">分四季与主题——人民生活、景致、劳动，层次丰富</p>
             <PhotoGallery
               :photos="store.allPhotos"
               :themes="store.photoThemeList"

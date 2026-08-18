@@ -2,8 +2,8 @@
   <div class="video-page" style="padding-top: 64px;">
     <section class="video-page__header">
       <div class="container">
-        <h1 class="section-title">Promotional Videos</h1>
-        <p class="section-subtitle">Curated videos showcasing Jiangxiang Village — embeddable in mini-programs</p>
+        <h1 class="section-title">宣传片</h1>
+        <p class="section-subtitle">精选视频展示蒋巷村——支持小程序内嵌</p>
       </div>
     </section>
 

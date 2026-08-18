@@ -4,8 +4,8 @@
 
     <div class="tour-map__sidebar">
       <div class="tour-map__header">
-        <h3>Explore Landmarks</h3>
-        <p>{{ filteredLandmarks.length }} locations found</p>
+        <h3>探索地标</h3>
+        <p>{{ filteredLandmarks.length }} 个景点</p>
       </div>
 
       <div class="tour-map__categories">
@@ -31,7 +31,6 @@
           <img :src="landmark.image" :alt="landmark.name" loading="lazy" />
           <div class="tour-map__item-info">
             <h4>{{ landmark.name }}</h4>
-            <p>{{ landmark.nameCN }}</p>
             <span class="tour-map__tag">{{ landmark.category }}</span>
           </div>
         </div>
@@ -113,7 +112,6 @@ const addMarkers = () => {
       <div style="width:240px;">
         <img src="${landmark.image}" alt="${landmark.name}" style="width:100%;height:120px;object-fit:cover;border-radius:8px;margin-bottom:8px;" />
         <h4 style="margin:0 0 4px;color:#1f6d3d;">${landmark.name}</h4>
-        <p style="margin:0 0 4px;font-size:0.85rem;color:#6b7280;">${landmark.nameCN}</p>
         <p style="margin:0 0 8px;font-size:0.8rem;color:#4b5563;line-height:1.4;">${landmark.desc.substring(0, 100)}...</p>
         <p style="margin:0;font-size:0.75rem;color:#9ca3af;">${landmark.visiting}</p>
       </div>

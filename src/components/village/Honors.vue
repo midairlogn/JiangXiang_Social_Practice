@@ -1,7 +1,7 @@
 <template>
   <div class="honors">
     <el-tabs v-model="activeTab" class="honors__tabs">
-      <el-tab-pane label="Village Honors" name="village">
+      <el-tab-pane label="村庄荣誉" name="village">
         <div class="honors__grid">
           <div
             v-for="honor in villageHonors"
@@ -14,23 +14,22 @@
             </div>
             <div class="honors__card-body">
               <h4>{{ honor.title }}</h4>
-              <p class="honors__card-cn">{{ honor.titleCN }}</p>
-              <span class="honors__level" :class="`honors__level--${honor.level.toLowerCase()}`">{{ honor.level }}</span>
+              <span class="honors__level" :class="`honors__level--${levelClass(honor.level)}`">{{ honor.level }}</span>
               <span v-if="honor.year" class="honors__year">{{ honor.year }}</span>
             </div>
           </div>
         </div>
       </el-tab-pane>
 
-      <el-tab-pane label="Leader Honors" name="leader">
+      <el-tab-pane label="个人荣誉" name="leader">
         <div class="honors__leader-intro">
           <div class="honors__leader-avatar">
             <el-icon :size="48"><UserFilled /></el-icon>
           </div>
           <div>
-            <h3>Chang Desheng (常德盛)</h3>
-            <p>First Secretary of Jiangxiang Village Party Committee</p>
-            <p class="honors__leader-quote">"I want what benefits farmers long-term; what earns their understanding and recognition of a Party member's commitment."</p>
+            <h3>常德盛</h3>
+            <p>蒋巷村党委第一书记</p>
+            <p class="honors__leader-quote">"这些钱我不能要，要了就会失去凝聚力、向心力、号召力。我要的是农民长期得到实惠，安居乐业。"</p>
           </div>
         </div>
         <div class="honors__grid">
@@ -45,7 +44,6 @@
             </div>
             <div class="honors__card-body">
               <h4>{{ honor.title }}</h4>
-              <p class="honors__card-cn">{{ honor.titleCN }}</p>
               <span class="honors__level honors__level--national">{{ honor.level }}</span>
               <p class="honors__card-desc">{{ honor.desc }}</p>
             </div>
@@ -53,13 +51,12 @@
         </div>
       </el-tab-pane>
 
-      <el-tab-pane label="Leadership Visits" name="visits">
+      <el-tab-pane label="领导视察" name="visits">
         <div class="honors__visits">
           <div v-for="visit in visits" :key="visit.leader" class="honors__visit-card">
             <div class="honors__visit-year">{{ visit.year }}</div>
             <div class="honors__visit-body">
               <h4>{{ visit.leader }}</h4>
-              <p class="honors__visit-cn">{{ visit.leaderCN }}</p>
               <blockquote class="honors__quote">"{{ visit.quote }}"</blockquote>
             </div>
           </div>
@@ -72,8 +69,8 @@
         <div class="honors__modal-icon">
           <el-icon :size="48"><component :is="selectedHonor.icon || 'Trophy'" /></el-icon>
         </div>
-        <h3>{{ selectedHonor.titleCN }}</h3>
-        <span class="honors__level" :class="`honors__level--${(selectedHonor.level || '').toLowerCase()}`">{{ selectedHonor.level }}</span>
+        <h3>{{ selectedHonor.title }}</h3>
+        <span class="honors__level" :class="`honors__level--${levelClass(selectedHonor.level)}`">{{ selectedHonor.level }}</span>
         <p>{{ selectedHonor.desc }}</p>
       </div>
     </el-dialog>
@@ -93,6 +90,11 @@ defineProps({
 const activeTab = ref('village')
 const modalVisible = ref(false)
 const selectedHonor = ref(null)
+
+const levelClass = (level) => {
+  const map = { '国家级': 'national', '省级': 'provincial', '国际': 'international' }
+  return map[level] || 'national'
+}
 
 const openModal = (honor) => {
   selectedHonor.value = honor

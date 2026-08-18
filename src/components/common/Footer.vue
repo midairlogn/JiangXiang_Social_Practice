@@ -3,50 +3,49 @@
     <div class="footer__container">
       <div class="footer__grid">
         <div class="footer__col footer__col--brand">
-          <h3 class="footer__title">🌾 Jiangxiang Village</h3>
+          <h3 class="footer__title">🌾 蒋巷村</h3>
           <p class="footer__desc">
-            A model of rural revitalization in Changshu, Jiangsu. From a disease-ridden swamp to a billion-yuan
-            ecological community — the Jiangxiang miracle led by Chang Desheng.
+            江苏省常熟市乡村振兴典范。从血吸虫病流行的穷乡僻壤到产值十亿的生态社区——常德盛带领下的蒋巷奇迹。
           </p>
-          <p class="footer__motto">"Poverty has no roots; wealth is not destined."</p>
+          <p class="footer__motto">"穷不会生根，富不是天生。"</p>
         </div>
 
         <div class="footer__col">
-          <h4 class="footer__subtitle">Quick Links</h4>
+          <h4 class="footer__subtitle">快速导航</h4>
           <ul class="footer__links">
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/video">Promotional Video</router-link></li>
-            <li><router-link to="/map">Tour Map</router-link></li>
-            <li><router-link to="/village">Village Introduction</router-link></li>
-            <li><router-link to="/features">Special Features</router-link></li>
+            <li><router-link to="/">首页</router-link></li>
+            <li><router-link to="/video">宣传片</router-link></li>
+            <li><router-link to="/map">导览地图</router-link></li>
+            <li><router-link to="/village">村庄介绍</router-link></li>
+            <li><router-link to="/features">特色展示</router-link></li>
           </ul>
         </div>
 
         <div class="footer__col">
-          <h4 class="footer__subtitle">Contact</h4>
+          <h4 class="footer__subtitle">联系方式</h4>
           <ul class="footer__contact">
-            <li>📍 Zhitang Town, Changshu City, Jiangsu Province</li>
-            <li>📮 Near Shajiabang Scenic Area</li>
-            <li>🚗 3 min to highway, via G204 & Xitai Rd</li>
-            <li>🌐 National 4A Tourist Attraction</li>
+            <li>📍 江苏省常熟市支塘镇</li>
+            <li>📮 毗邻沙家浜风景区</li>
+            <li>🚗 3分钟上高速，204国道与锡太公路交汇</li>
+            <li>🌐 国家4A级旅游景区</li>
           </ul>
         </div>
 
         <div class="footer__col">
-          <h4 class="footer__subtitle">Village Stats</h4>
+          <h4 class="footer__subtitle">村庄数据</h4>
           <ul class="footer__stats">
-            <li><span>192</span> Households</li>
-            <li><span>875</span> Residents</li>
-            <li><span>3 km²</span> Area</li>
-            <li><span>60%+</span> Green Coverage</li>
+            <li><span>192</span> 户</li>
+            <li><span>875</span> 人</li>
+            <li><span>3 km²</span> 面积</li>
+            <li><span>60%+</span> 绿化覆盖率</li>
           </ul>
         </div>
       </div>
 
       <div class="footer__bottom">
         <p>
-          © {{ year }} Jiangxiang Village Social Practice Project. Built with Vue 3.
-          <span class="footer__credit">Content based on publicly available sources about Jiangxiang Village (蒋巷村).</span>
+          © {{ year }} 六朝松小纵队 · 蒋巷村社会实践项目。基于 Vue 3 构建。
+          <span class="footer__credit">内容来源于蒋巷村公开资料。</span>
         </p>
       </div>
     </div>

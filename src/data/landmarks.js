@@ -1,134 +1,122 @@
 export const landmarks = [
   {
     id: 1,
-    name: 'Village History Exhibition Hall',
-    nameCN: '村史展览馆',
+    name: '村史展览馆',
     category: 'culture',
     coordinates: [31.5686, 121.0492],
     image: '/images/landmarks/village-history-hall.svg',
-    desc: 'The heart of Jiangxiang\'s story. Nearly 100 national and provincial honorary titles line the walls. Here, Chang Desheng personally guides visitors through the village\'s transformation from a disease-ridden swamp to a model of rural prosperity.',
-    visiting: 'Free admission with guided tours available'
+    desc: '蒋巷故事的核心所在。馆内陈列近百项国家和省级荣誉。常德盛亲自为游客讲解蒋巷村从血吸虫病流行的穷乡僻壤到乡村振兴典范的蜕变历程。',
+    visiting: '免费参观，提供讲解服务'
   },
   {
     id: 2,
-    name: 'Jiangxiang Ecological Park',
-    nameCN: '蒋巷生态园',
+    name: '蒋巷生态园',
     category: 'nature',
     coordinates: [31.5702, 121.0515],
     image: '/images/landmarks/ecological-park.svg',
-    desc: 'A 600+ mu ecological park built around the concept of "agriculture as the core." Features lotus ponds, bamboo forests, fruit orchards, and 30+ amusement rides including rainbow slides. The hub of Jiangxiang\'s eco-tourism attracting 200,000+ visitors annually.',
-    visiting: 'Ticket required, includes most attractions'
+    desc: '占地600多亩的生态园，以"农"字为核心。荷塘、竹林、果园交相辉映，设有彩虹滑道等30多个游乐项目。每年吸引游客超20万人次，是蒋巷生态旅游的核心区域。',
+    visiting: '需购票入园，包含大部分游乐项目'
   },
   {
     id: 3,
-    name: 'Villagers\' New Homeland',
-    nameCN: '村民新家园',
+    name: '村民新家园',
     category: 'residential',
     coordinates: [31.5672, 121.0485],
     image: '/images/landmarks/villagers-homeland.svg',
-    desc: '192 two-story villas (220 sqm each) plus 158 elderly apartments. Each villa cost 300,000 yuan to build but was sold to villagers for only 128,000 yuan. Awarded "Jiangsu Province Civilized Residential Community."',
-    visiting: 'Residential area, exterior viewing'
+    desc: '192栋两层别墅（每栋220平方米）和158套老年公寓。每栋别墅造价约30万元，仅以12.8万元卖给村民，差额由村集体补贴。被评为"江苏省村镇文明住宅小区"。',
+    visiting: '住宅区，可外观参观'
   },
   {
     id: 4,
-    name: 'Changsheng Industrial Park',
-    nameCN: '常盛工业园',
+    name: '常盛工业园',
     category: 'industry',
     coordinates: [31.5658, 121.0470],
     image: '/images/landmarks/village-history-hall.svg',
-    desc: 'Home of Changsheng Group — the largest steel structure production base in Jiangsu Province. Growing from a single color-steel panel line to a 1 billion yuan enterprise. Products have won the Shanghai "Golden Steel Award" for 5 consecutive years.',
-    visiting: 'Industrial tours by appointment'
+    desc: '常盛集团所在地——江苏省最大的钢结构生产基地。从一条彩钢复合板生产线发展成年产值超10亿元的企业集团。产品连续五年荣获上海市建筑工程金属钢结构最高奖——金钢奖。',
+    visiting: '预约参观工业旅游'
   },
   {
     id: 5,
-    name: 'Organic Rice Base',
-    nameCN: '有机稻种植基地',
+    name: '有机稻种植基地',
     category: 'agriculture',
     coordinates: [31.5720, 121.0530],
     image: '/images/landmarks/organic-rice-base.svg',
-    desc: '1,200 mu of certified organic rice fields. No chemical fertilizers or pesticides. Uses rice-duck-goose coexistence farming with duckweed as natural fertilizer. "Jiangxiang Rice" sells at 20 yuan/kg with annual output of 490,000 kg.',
-    visiting: 'Seasonal viewing, farm experience tours'
+    desc: '1200亩认证有机稻田。不施化肥、不喷农药，采用"稻鸭鹅共作"生态模式，以绿萍为天然肥料。"蒋巷大米"售价每公斤20元，年产49万公斤。',
+    visiting: '季节性观光，农耕体验游'
   },
   {
     id: 6,
-    name: 'Jiangnan Folk Museum',
-    nameCN: '江南农家民俗馆',
+    name: '江南农家民俗馆',
     category: 'culture',
     coordinates: [31.5690, 121.0500],
     image: '/images/landmarks/folk-museum.svg',
-    desc: 'A museum preserving Jiangnan rural folk culture with traditional farming tools, household items, and exhibits depicting rural life through the decades. A window into the region\'s agricultural heritage.',
-    visiting: 'Free admission'
+    desc: '展示江南农村民俗文化的博物馆，陈列传统农具、生活用具，展现数十年来农村生活变迁。是了解江南地区农业文化的一扇窗口。',
+    visiting: '免费参观'
   },
   {
     id: 7,
-    name: 'Jiangxiang Academy',
-    nameCN: '蒋巷书院',
+    name: '蒋巷书院',
     category: 'accommodation',
     coordinates: [31.5710, 121.0520],
     image: '/images/landmarks/jiangxiang-academy.svg',
-    desc: 'Changshu\'s first mid-to-high-end B&B resort hotel. 28 modern yet rustic rooms set in tranquil countryside surroundings. A collaboration with professional design and management teams.',
-    visiting: 'Booking required for accommodation'
+    desc: '常熟市首家中高端民宿度假酒店。28间现代简约又不失野趣的精致客房，坐落在宁静的乡村环境中。由专业设计和管理团队运营。',
+    visiting: '住宿需提前预订'
   },
   {
     id: 8,
-    name: 'Farmers\' Vegetable Garden',
-    nameCN: '农民蔬菜园',
+    name: '农民蔬菜园',
     category: 'agriculture',
     coordinates: [31.5665, 121.0510],
     image: '/images/landmarks/vegetable-garden.svg',
-    desc: 'A communal vegetable garden where villagers grow fresh organic produce. Visitors can experience farming activities and pick seasonal vegetables. Part of the "Four Parks One Base" development framework.',
-    visiting: 'Seasonal picking experiences available'
+    desc: '村民种植新鲜有机蔬菜的集体菜园。利用村庄循环经济系统的有机堆肥，无农药种植。游客可体验农耕活动和采摘时令蔬菜。',
+    visiting: '季节性采摘体验'
   },
   {
     id: 9,
-    name: 'Farmer Theater',
-    nameCN: '农民剧场',
+    name: '农民剧场',
     category: 'culture',
     coordinates: [31.5678, 121.0495],
     image: '/images/landmarks/farmer-theater.jpg',
-    desc: 'A community theater enriching villagers\' cultural lives. Hosts performances, film screenings, and community events. Part of Jiangxiang\'s "spirit passed on" development philosophy.',
-    visiting: 'Public events, check schedule'
+    desc: '丰富村民文化生活的社区剧场。举办演出、电影放映和社区活动。是蒋巷"精神传家"发展理念的体现。',
+    visiting: '公开活动，查看日程'
   },
   {
     id: 10,
-    name: 'Gaga Tribe Theme Park',
-    nameCN: '嘎嘎部落',
+    name: '嘎嘎部落',
     category: 'entertainment',
     coordinates: [31.5705, 121.0540],
     image: '/images/landmarks/gaga-tribe.svg',
-    desc: 'A parent-child amusement park within the ecological park. Featuring games, educational activities, and outdoor adventures. An innovative "Party Building + Tourism" development model.',
-    visiting: 'Ticket required'
+    desc: '生态园内的亲子主题乐园。设有游戏、教育活动和户外探险项目。是"党建+旅游"发展新模式的创新探索。',
+    visiting: '需购票入园'
   },
   {
     id: 11,
-    name: 'Lotus Pond Corridor',
-    nameCN: '荷塘长廊',
+    name: '荷塘长廊',
     category: 'nature',
     coordinates: [31.5695, 121.0505],
     image: '/images/landmarks/lotus-pond.svg',
-    desc: 'A scenic lotus pond with a winding corridor. In summer, lotus flowers bloom across the water creating a breathtaking view. A favorite spot for photography and relaxation.',
-    visiting: 'Free, best viewed in summer'
+    desc: '风景秀丽的荷塘，蜿蜒的长廊穿行其间。夏日里荷花盛开，水面铺满碧绿，景色令人心旷神怡，是摄影和休闲的绝佳去处。',
+    visiting: '免费开放，夏季最佳观赏期'
   },
   {
     id: 12,
-    name: 'Nursing Home & Elderly Apartments',
-    nameCN: '护理院与老年公寓',
+    name: '护理院与老年公寓',
     category: 'welfare',
     coordinates: [31.5675, 121.0480],
     image: '/images/landmarks/nursing-home.svg',
-    desc: '158 elderly apartments provided free to seniors, plus a 250-bed nursing home with integrated medical services. Elderly receive 600-2,300 yuan/month pension. Listed as a national elder-friendly community.',
-    visiting: 'Residential welfare facility'
+    desc: '158套老年公寓免费供老人居住，另有250个床位的护理院，提供医养结合服务。老人每月可领600至2300元养老金。被评为全国老年友好型社区。',
+    visiting: '社会福利设施'
   }
 ]
 
 export const landmarkCategories = [
-  { value: 'all', label: 'All' },
-  { value: 'nature', label: 'Nature & Ecology' },
-  { value: 'culture', label: 'Culture & History' },
-  { value: 'agriculture', label: 'Agriculture' },
-  { value: 'residential', label: 'Residential' },
-  { value: 'industry', label: 'Industry' },
-  { value: 'entertainment', label: 'Entertainment' },
-  { value: 'accommodation', label: 'Accommodation' },
-  { value: 'welfare', label: 'Welfare' }
+  { value: 'all', label: '全部' },
+  { value: 'nature', label: '自然生态' },
+  { value: 'culture', label: '文化历史' },
+  { value: 'agriculture', label: '农业观光' },
+  { value: 'residential', label: '居住社区' },
+  { value: 'industry', label: '工业园区' },
+  { value: 'entertainment', label: '休闲娱乐' },
+  { value: 'accommodation', label: '住宿度假' },
+  { value: 'welfare', label: '民生福利' }
 ]

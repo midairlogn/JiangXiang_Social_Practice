@@ -2,18 +2,18 @@
   <div class="village-page" style="padding-top: 64px;">
     <section class="village-page__header">
       <div class="container">
-        <h1 class="section-title">Village Introduction</h1>
-        <p class="section-subtitle">History, honors, and modern values of Jiangxiang Village</p>
+        <h1 class="section-title">村庄介绍</h1>
+        <p class="section-subtitle">蒋巷村的历史、荣誉与现代价值</p>
         <div class="village-page__overview">
           <div class="village-page__info">
-            <h2>蒋巷村 · {{ store.overview.name }}</h2>
-            <p class="village-page__location">📍 {{ store.overview.location }} · {{ store.overview.locationCN }}</p>
+            <h2>{{ store.overview.name }}</h2>
+            <p class="village-page__location">📍 {{ store.overview.location }}</p>
             <div class="village-page__stats">
-              <span><strong>{{ store.overview.households }}</strong> Households</span>
-              <span><strong>{{ store.overview.population }}</strong> Residents</span>
-              <span><strong>{{ store.overview.area }}</strong> Area</span>
+              <span><strong>{{ store.overview.households }}</strong> 户</span>
+              <span><strong>{{ store.overview.population }}</strong> 人</span>
+              <span><strong>{{ store.overview.area }}</strong> 面积</span>
             </div>
-            <p class="village-page__party">Party Secretary: {{ store.overview.partySecretary }}</p>
+            <p class="village-page__party">村党委第一书记：{{ store.overview.partySecretary }}</p>
           </div>
         </div>
       </div>
@@ -22,15 +22,15 @@
     <section class="village-page__content section-padding">
       <div class="container">
         <el-tabs v-model="activeTab" class="village-page__tabs">
-          <el-tab-pane label="Village History" name="history">
-            <h2 class="section-title">History Timeline</h2>
-            <p class="section-subtitle">From a disease-ridden swamp to a model of rural prosperity</p>
+          <el-tab-pane label="村史" name="history">
+            <h2 class="section-title">历史时间线</h2>
+            <p class="section-subtitle">从血吸虫病流行的穷乡僻壤到乡村振兴典范</p>
             <VillageHistory :history="store.history" />
           </el-tab-pane>
 
-          <el-tab-pane label="Honors & Awards" name="honors">
-            <h2 class="section-title">Honors & Recognition</h2>
-            <p class="section-subtitle">{{ store.honorCount }}+ national, provincial, and international honors earned</p>
+          <el-tab-pane label="荣誉表彰" name="honors">
+            <h2 class="section-title">荣誉表彰</h2>
+            <p class="section-subtitle">获国家级、省级及国际荣誉近{{ store.honorCount }}项</p>
             <Honors
               :village-honors="store.honors"
               :leader-honors="store.leaders"
@@ -38,9 +38,9 @@
             />
           </el-tab-pane>
 
-          <el-tab-pane label="Modern Value" name="modern">
-            <h2 class="section-title">Modern Value</h2>
-            <p class="section-subtitle">A replicable model for rural revitalization and sustainable development</p>
+          <el-tab-pane label="现代价值" name="modern">
+            <h2 class="section-title">现代价值</h2>
+            <p class="section-subtitle">可复制可推广的乡村振兴和可持续发展范本</p>
             <ModernValue :overview="store.overview" />
           </el-tab-pane>
         </el-tabs>

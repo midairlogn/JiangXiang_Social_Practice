@@ -12,7 +12,6 @@
           <div class="village-history__year">{{ item.year }}</div>
           <div class="village-history__content">
             <h3 class="village-history__title">{{ item.title }}</h3>
-            <p class="village-history__title-cn">{{ item.titleCN }}</p>
             <p class="village-history__desc">{{ item.desc }}</p>
           </div>
           <div class="village-history__image">

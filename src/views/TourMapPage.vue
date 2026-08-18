@@ -2,8 +2,8 @@
   <div class="map-page" style="padding-top: 64px;">
     <section class="map-page__header">
       <div class="container">
-        <h1 class="section-title">Tour Map</h1>
-        <p class="section-subtitle">Explore Jiangxiang Village's 12 landmarks on an interactive map</p>
+        <h1 class="section-title">导览地图</h1>
+        <p class="section-subtitle">在交互式地图上探索蒋巷村12个地标景点</p>
       </div>
     </section>
 
@@ -22,7 +22,7 @@
 
     <section class="map-page__legend" style="padding: 2rem 0 4rem;">
       <div class="container">
-        <h3 class="section-title" style="font-size: 1.5rem;">Landmark Legend</h3>
+        <h3 class="section-title" style="font-size: 1.5rem;">地标图例</h3>
         <div class="map-page__legend-grid">
           <div v-for="cat in categoryColors" :key="cat.value" class="map-page__legend-item">
             <span class="map-page__legend-dot" :style="{ background: cat.color }"></span>
@@ -49,14 +49,14 @@ const filteredLandmarks = computed(() => {
 })
 
 const categoryColors = [
-  { value: 'nature', label: 'Nature & Ecology', color: '#2d8a4f' },
-  { value: 'culture', label: 'Culture & History', color: '#d4a017' },
-  { value: 'agriculture', label: 'Agriculture', color: '#8b5e3c' },
-  { value: 'residential', label: 'Residential', color: '#3b82f6' },
-  { value: 'industry', label: 'Industry', color: '#6b7280' },
-  { value: 'entertainment', label: 'Entertainment', color: '#ec4899' },
-  { value: 'accommodation', label: 'Accommodation', color: '#a855f7' },
-  { value: 'welfare', label: 'Welfare', color: '#f59e0b' }
+  { value: 'nature', label: '自然生态', color: '#2d8a4f' },
+  { value: 'culture', label: '文化历史', color: '#d4a017' },
+  { value: 'agriculture', label: '农业观光', color: '#8b5e3c' },
+  { value: 'residential', label: '居住社区', color: '#3b82f6' },
+  { value: 'industry', label: '工业园区', color: '#6b7280' },
+  { value: 'entertainment', label: '休闲娱乐', color: '#ec4899' },
+  { value: 'accommodation', label: '住宿度假', color: '#a855f7' },
+  { value: 'welfare', label: '民生福利', color: '#f59e0b' }
 ]
 </script>
 

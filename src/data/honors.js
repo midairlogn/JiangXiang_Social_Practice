@@ -1,36 +1,36 @@
 export const villageHonors = [
-  { title: 'National Civilized Village', titleCN: '全国文明村', level: 'National', year: '', icon: 'Medal', desc: 'Awarded for outstanding achievements in civilization construction, rural governance, and social development.' },
-  { title: 'National Ecological Village', titleCN: '国家级生态村', level: 'National', year: '', icon: 'Leaf', desc: 'Recognized for ecological protection, green development, and sustainable environmental practices.' },
-  { title: "China's Most Charming Leisure Village", titleCN: '中国最有魅力休闲乡村', level: 'National', year: '', icon: 'Star', desc: 'Selected for its unique charm as a rural leisure destination with beautiful landscapes and rich culture.' },
-  { title: 'National 4A Tourist Attraction', titleCN: '国家4A级旅游景区', level: 'National', year: '2011', icon: 'MapLocation', desc: 'Recognized as a top-tier scenic area with complete tourism infrastructure and high-quality services.' },
-  { title: 'National Rural Tourism Key Village', titleCN: '全国乡村旅游重点村', level: 'National', year: '2019', icon: 'Guide', desc: 'One of the first batch of national key villages for rural tourism development.' },
-  { title: 'National Agricultural Tourism Demonstration Site', titleCN: '全国农业旅游示范点', level: 'National', year: '', icon: 'Sunrise', desc: 'A model site demonstrating the integration of agriculture and tourism.' },
-  { title: 'National Characteristic Landscape Tourism Village', titleCN: '国家特色景观旅游名村', level: 'National', year: '', icon: 'Picture', desc: 'Recognized for its distinctive rural landscape and tourism value.' },
-  { title: 'National Democratic Rule of Law Model Village', titleCN: '全国民主法治示范村', level: 'National', year: '', icon: 'Reading', desc: 'Awarded for exemplary democratic governance and legal awareness.' },
-  { title: 'National New Countryside Construction Tech Demo Village', titleCN: '全国新农村建设科技示范村', level: 'National', year: '', icon: 'Cpu', desc: 'A demonstration village for technology-driven rural construction.' },
-  { title: 'National Rural Governance Model Village', titleCN: '全国乡村治理示范村', level: 'National', year: '', icon: 'OfficeBuilding', desc: 'Recognized as a model for effective rural governance and community management.' },
-  { title: 'National Elderly Care Model Village', titleCN: '全国敬老模范村', level: 'National', year: '', icon: 'User', desc: 'Awarded for outstanding elderly care services and filial piety culture.' },
-  { title: 'China Habitat Environment Example Prize', titleCN: '中国人居环境范例奖', level: 'National', year: '', icon: 'HomeFilled', desc: 'A prestigious award for exemplary living environment improvements.' },
-  { title: 'Asia-Pacific Low-Carbon Agriculture Award', titleCN: '亚太环保协会低碳农业奖', level: 'International', year: '', icon: 'Lightning', desc: 'International recognition for low-carbon agricultural practices.' },
-  { title: 'National Population & Family Planning Demo Village', titleCN: '全国人口与计划生育示范村', level: 'National', year: '', icon: 'UserFilled', desc: 'Model village for population and family planning programs.' },
-  { title: 'Jiangsu Province Most Beautiful Village', titleCN: '江苏省最美乡村', level: 'Provincial', year: '', icon: 'Flower', desc: 'Selected as one of Jiangsu Province\'s most beautiful villages.' },
-  { title: 'Jiangsu Province Civilized Village Model', titleCN: '江苏省文明村标兵', level: 'Provincial', year: '', icon: 'Trophy', desc: 'A benchmark village for civilization in Jiangsu Province.' }
+  { title: '全国文明村', level: '国家级', year: '', icon: 'Medal', desc: '在文明建设、乡村治理和社会发展方面取得突出成就。' },
+  { title: '国家级生态村', level: '国家级', year: '', icon: 'Leaf', desc: '在生态保护、绿色发展和可持续环境实践方面获得认可。' },
+  { title: '中国最有魅力休闲乡村', level: '国家级', year: '', icon: 'Star', desc: '凭借优美的自然风光和深厚的文化底蕴入选。' },
+  { title: '国家4A级旅游景区', level: '国家级', year: '2011年', icon: 'MapLocation', desc: '拥有完善的旅游基础设施和优质服务的高等级景区。' },
+  { title: '全国乡村旅游重点村', level: '国家级', year: '2019年', icon: 'Guide', desc: '首批全国乡村旅游重点村之一。' },
+  { title: '全国农业旅游示范点', level: '国家级', year: '', icon: 'Sunrise', desc: '农业与旅游融合发展的示范点。' },
+  { title: '国家特色景观旅游名村', level: '国家级', year: '', icon: 'Picture', desc: '具有独特乡村景观和旅游价值的村庄。' },
+  { title: '全国民主法治示范村', level: '国家级', year: '', icon: 'Reading', desc: '民主治理和法治意识的典范村庄。' },
+  { title: '全国新农村建设科技示范村', level: '国家级', year: '', icon: 'Cpu', desc: '以科技驱动乡村建设的示范村。' },
+  { title: '全国乡村治理示范村', level: '国家级', year: '', icon: 'OfficeBuilding', desc: '乡村有效治理和社区管理的模范。' },
+  { title: '全国敬老模范村', level: '国家级', year: '', icon: 'User', desc: '在养老服务弘扬孝道文化方面表现突出。' },
+  { title: '中国人居环境范例奖', level: '国家级', year: '', icon: 'HomeFilled', desc: '在人居环境改善方面的杰出成就奖。' },
+  { title: '亚太环保协会低碳农业奖', level: '国际', year: '', icon: 'Lightning', desc: '在低碳农业实践方面获得国际认可。' },
+  { title: '全国人口与计划生育示范村', level: '国家级', year: '', icon: 'UserFilled', desc: '人口与计划生育工作的模范村庄。' },
+  { title: '江苏省最美乡村', level: '省级', year: '', icon: 'Flower', desc: '江苏省最美乡村之一。' },
+  { title: '江苏省文明村标兵', level: '省级', year: '', icon: 'Trophy', desc: '江苏省文明建设的标杆村庄。' }
 ]
 
 export const leaderHonors = [
-  { title: 'Outstanding Communist Party Member of China', titleCN: '全国优秀共产党员', level: 'National', desc: 'Recognized nationally for exemplary Party membership and service.' },
-  { title: 'National Labor Model', titleCN: '全国劳动模范', level: 'National', desc: 'Awarded for extraordinary contributions through hard work and dedication.' },
-  { title: '3rd National Moral Model', titleCN: '全国第三届道德模范', level: 'National', desc: 'Honored for outstanding moral character and ethical leadership.' },
-  { title: 'Delegate, 16th CPC National Congress', titleCN: '党的十六大代表', level: 'National', desc: 'Elected as a delegate to the 16th National Congress of the Communist Party of China.' },
-  { title: 'Delegate, 18th CPC National Congress', titleCN: '党的十八大代表', level: 'National', desc: 'Elected as a delegate to the 18th National Congress of the Communist Party of China.' },
-  { title: 'National Township Entrepreneur', titleCN: '全国乡镇企业家', level: 'National', desc: 'Recognized for building successful rural enterprises.' },
-  { title: 'National "Startup Star"', titleCN: '全国创业之星', level: 'National', desc: 'Awarded for pioneering rural entrepreneurship.' }
+  { title: '全国优秀共产党员', level: '国家级', desc: '以模范的党员行为和服务精神获得全国表彰。' },
+  { title: '全国劳动模范', level: '国家级', desc: '以非凡的奉献和辛勤劳动获得表彰。' },
+  { title: '全国第三届道德模范', level: '国家级', desc: '以崇高的道德品质和伦理领导力获得荣誉。' },
+  { title: '党的十六大代表', level: '国家级', desc: '当选中国共产党第十六次全国代表大会代表。' },
+  { title: '党的十八大代表', level: '国家级', desc: '当选中国共产党第十八次全国代表大会代表。' },
+  { title: '全国乡镇企业家', level: '国家级', desc: '在建设成功乡镇企业方面获得认可。' },
+  { title: '全国"创业之星"', level: '国家级', desc: '在开创乡村创业道路方面获奖。' }
 ]
 
 export const leadershipVisits = [
-  { leader: 'Premier Wen Jiabao', leaderCN: '温家宝总理', year: '2004', quote: 'This village has achieved all-around development — agriculture has developed, rural enterprises have grown, and farmers have become prosperous.' },
-  { leader: 'Vice President Zeng Qinghong', leaderCN: '曾庆红副主席', year: '2004', quote: 'What a wonderful place! This is a modern new countryside.' },
-  { leader: 'CPPCC Chairman Jia Qinglin', leaderCN: '贾庆林主席', year: '2006', quote: 'Highly praised Chang Desheng\'s love for the countryside, agriculture, and farmers.' },
-  { leader: 'Former Premier Li Peng', leaderCN: '李鹏委员长', year: '2007', quote: 'Jiangxiang villagers are truly happy!' },
-  { leader: 'Propaganda Dept. Head Liu Yunshan', leaderCN: '刘云山部长', year: '2010', quote: 'Inscribed: "Happy new homeland, harmonious civilized village."' }
+  { leader: '温家宝总理', year: '2004年', quote: '你这个村叫做全面发展，农业发展、乡镇企业发展、农民富裕。' },
+  { leader: '曾庆红副主席', year: '2004年', quote: '多好的地方啊，这就是现代化新农村。' },
+  { leader: '贾庆林主席', year: '2006年', quote: '高度赞扬常书记热爱农村、热爱农业、热爱农民的精神。' },
+  { leader: '李鹏委员长', year: '2007年', quote: '蒋巷村民真幸福！' },
+  { leader: '刘云山部长', year: '2010年', quote: '亲笔题词："幸福新家园，和谐文明村"。' }
 ]

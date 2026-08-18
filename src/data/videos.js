@@ -1,68 +1,64 @@
 export const videos = [
   {
     id: 1,
-    title: 'Jiangxiang Village Social Practice',
-    titleCN: '蒋巷村社会实践',
+    title: '蒋巷村社会实践',
     src: '/videos/jiangxiang-social-practice.mp4',
     poster: '/images/posters/social-practice.svg',
-    duration: 'Social Practice',
+    duration: '社会实践',
     category: 'main',
-    desc: 'A documentary showcasing the Jiangxiang Village social practice experience — exploring the village\'s transformation from a poor swamp to a model of rural revitalization.',
+    desc: '一部展示蒋巷村社会实践经历的纪录片——探索村庄从贫困沼泽到乡村振兴典范的蜕变历程。',
     isLocal: true
   },
   {
     id: 2,
-    title: 'Jiangxiang Village Overview',
-    titleCN: '蒋巷村概览',
+    title: '蒋巷村概览',
     src: '',
     poster: '/images/posters/village-overview.svg',
-    duration: 'External',
+    duration: '外部链接',
     category: 'overview',
-    desc: 'An aerial overview of Jiangxiang Village\'s beautiful landscape — villas, rice fields, ecological park, and waterways of the Jiangnan water town.',
+    desc: '蒋巷村美丽风光的航拍概览——别墅、稻田、生态园和江南水乡的水网河道。',
     isLocal: false,
     externalUrl: 'https://player.bilibili.com/player.html?bvid=BV1xV411B7oP'
   },
   {
     id: 3,
-    title: 'Organic Rice Farming',
-    titleCN: '有机稻种植',
+    title: '有机稻种植',
     src: '',
     poster: '/images/posters/organic-farming.svg',
-    duration: 'External',
+    duration: '外部链接',
     category: 'agriculture',
-    desc: 'A look at Jiangxiang\'s 1,200 mu organic rice fields — duck-goose coexistence farming, duckweed fertilizer, and sustainable agriculture in action.',
+    desc: '走进蒋巷1200亩有机稻田——稻鸭鹅共作、绿萍肥田，可持续农业实践的真实记录。',
     isLocal: false,
     externalUrl: ''
   },
   {
     id: 4,
-    title: 'Chang Desheng Story',
-    titleCN: '常德盛的故事',
+    title: '常德盛的故事',
     src: '',
     poster: '/images/posters/chang-story.svg',
-    duration: 'External',
+    duration: '外部链接',
     category: 'story',
-    desc: 'The inspiring story of Chang Desheng — 58 years of leading Jiangxiang Village from poverty to prosperity with unwavering dedication.',
+    desc: '常德盛的感人故事——58年如一日带领蒋巷村从贫困走向富裕，以坚定的信念和无私的奉献书写乡村振兴篇章。',
     isLocal: false,
     externalUrl: ''
   }
 ]
 
 export const videoCategories = [
-  { value: 'all', label: 'All Videos' },
-  { value: 'main', label: 'Social Practice' },
-  { value: 'overview', label: 'Village Overview' },
-  { value: 'agriculture', label: 'Agriculture' },
-  { value: 'story', label: 'People & Stories' }
+  { value: 'all', label: '全部视频' },
+  { value: 'main', label: '社会实践' },
+  { value: 'overview', label: '村庄概览' },
+  { value: 'agriculture', label: '农业生产' },
+  { value: 'story', label: '人物故事' }
 ]
 
 export const embedConfig = {
   miniProgram: {
-    note: 'Copy this embed code to use in WeChat Mini Programs. Replace the VIDEO_URL with your hosted video URL.',
+    note: '复制以下内嵌代码用于微信小程序。请将 VIDEO_URL 替换为您托管的视频地址，POSTER_URL 替换为封面图地址。',
     template: '<video src="{{VIDEO_URL}}" controls poster="{{POSTER_URL}}" style="width:100%;"></video>'
   },
   web: {
-    note: 'Embed code for web pages and blog posts.',
+    note: '用于网页和博客的内嵌代码。',
     template: '<iframe src="{{VIDEO_URL}}" width="640" height="360" frameborder="0" allowfullscreen></iframe>'
   }
 }
