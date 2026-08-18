@@ -202,7 +202,7 @@ const navCards = [
 
   &__scroll {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -211,13 +211,14 @@ const navCards = [
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    pointer-events: none;
   }
 
   &__scroll-line {
     width: 1px;
-    height: 40px;
+    height: 30px;
     background: rgba(255, 255, 255, 0.4);
-    margin: 8px auto 0;
+    margin: 6px auto 0;
     animation: scrollLine 2s ease-in-out infinite;
   }
 }

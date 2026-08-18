@@ -51,14 +51,3 @@ export const videoCategories = [
   { value: 'agriculture', label: '农业生产' },
   { value: 'story', label: '人物故事' }
 ]
-
-export const embedConfig = {
-  miniProgram: {
-    note: '复制以下内嵌代码用于微信小程序。请将 VIDEO_URL 替换为您托管的视频地址，POSTER_URL 替换为封面图地址。',
-    template: '<video src="{{VIDEO_URL}}" controls poster="{{POSTER_URL}}" style="width:100%;"></video>'
-  },
-  web: {
-    note: '用于网页和博客的内嵌代码。',
-    template: '<iframe src="{{VIDEO_URL}}" width="640" height="360" frameborder="0" allowfullscreen></iframe>'
-  }
-}

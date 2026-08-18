@@ -5,9 +5,6 @@
       <div class="video-gallery__info">
         <h3 class="video-gallery__title">{{ currentVideo.title }}</h3>
         <p class="video-gallery__desc">{{ currentVideo.desc }}</p>
-        <el-button type="primary" :icon="Share" @click="showEmbedDialog = true">
-          获取内嵌代码
-        </el-button>
       </div>
     </div>
 
@@ -37,29 +34,13 @@
       </div>
     </div>
 
-    <el-dialog v-model="showEmbedDialog" title="小程序内嵌代码" width="600">
-      <el-tabs v-model="embedTab">
-        <el-tab-pane label="微信小程序" name="miniprogram">
-          <p class="video-gallery__embed-note">复制以下内嵌代码用于微信小程序。请将 VIDEO_URL 替换为您托管的视频地址，POSTER_URL 替换为封面图地址。</p>
-          <el-input v-model="miniProgramEmbed" type="textarea" :rows="4" readonly />
-          <el-button type="primary" :icon="CopyDocument" @click="copyToClipboard(miniProgramEmbed)" class="video-gallery__copy-btn">复制代码</el-button>
-        </el-tab-pane>
-        <el-tab-pane label="网页内嵌" name="web">
-          <p class="video-gallery__embed-note">用于网页和博客的内嵌代码。</p>
-          <el-input v-model="webEmbed" type="textarea" :rows="4" readonly />
-          <el-button type="primary" :icon="CopyDocument" @click="copyToClipboard(webEmbed)" class="video-gallery__copy-btn">复制代码</el-button>
-        </el-tab-pane>
-      </el-tabs>
-    </el-dialog>
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
-import { Share, CopyDocument, VideoPlay } from '@element-plus/icons-vue'
-import { ElMessage } from 'element-plus'
+import { VideoPlay } from '@element-plus/icons-vue'
 import VideoPlayer from './VideoPlayer.vue'
-import { embedConfig } from '@/data/videos'
 
 const props = defineProps({
   videos: { type: Array, required: true },
@@ -68,33 +49,6 @@ const props = defineProps({
 })
 
 defineEmits(['select'])
-
-const showEmbedDialog = ref(false)
-const embedTab = ref('miniprogram')
-
-const videoUrl = computed(() => {
-  return props.currentVideo.src || props.currentVideo.externalUrl || 'YOUR_VIDEO_URL'
-})
-const posterUrl = computed(() => props.currentVideo.poster || 'YOUR_POSTER_URL')
-
-const miniProgramEmbed = computed(() =>
-  embedConfig.miniProgram.template
-    .replace('{{VIDEO_URL}}', videoUrl.value)
-    .replace('{{POSTER_URL}}', posterUrl.value)
-)
-
-const webEmbed = computed(() =>
-  embedConfig.web.template.replace('{{VIDEO_URL}}', videoUrl.value)
-)
-
-const copyToClipboard = async (text) => {
-  try {
-    await navigator.clipboard.writeText(text)
-    ElMessage.success('内嵌代码已复制到剪贴板！')
-  } catch {
-    ElMessage.error('复制失败，请手动复制。')
-  }
-}
 </script>
 
 <style scoped lang="scss">
@@ -218,17 +172,6 @@ const copyToClipboard = async (text) => {
       color: #9ca3af;
       font-size: 0.8rem;
     }
-  }
-
-  &__embed-note {
-    color: #6b7280;
-    font-size: 0.85rem;
-    margin-bottom: 0.75rem;
-    line-height: 1.5;
-  }
-
-  &__copy-btn {
-    margin-top: 0.75rem;
   }
 }
 </style>

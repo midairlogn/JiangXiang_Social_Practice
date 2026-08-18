@@ -10,12 +10,12 @@
     >
       <source v-if="video.src" :src="video.src" type="video/mp4" />
       <source v-if="video.externalUrl" :src="video.externalUrl" type="video/mp4" />
-      <p class="vjs-no-js">To view this video please enable JavaScript and consider upgrading to a web browser that supports HTML5 video.</p>
+      <p class="vjs-no-js">请启用 JavaScript 并使用支持 HTML5 视频的浏览器。</p>
     </video>
 
     <div v-if="!video.src && !video.externalUrl" class="video-player__placeholder">
       <el-icon :size="48"><VideoCamera /></el-icon>
-      <p>Video coming soon</p>
+      <p>视频即将上线</p>
       <p class="video-player__placeholder-desc">{{ video.desc }}</p>
     </div>
   </div>
@@ -45,7 +45,13 @@ const initPlayer = () => {
     videojs(videoRef.value, {
       fluid: true,
       playbackRates: [0.5, 1, 1.5, 2],
-      poster: props.video.poster
+      poster: props.video.poster,
+      controlBar: {
+        remainingTimeDisplay: false,
+        currentTimeDisplay: true,
+        durationDisplay: true,
+        timeDivider: true
+      }
     }).ready(function () {
       player = this
     })
