@@ -1,4 +1,4 @@
-export const villageOverview = {
+﻿export const villageOverview = {
   name: '蒋巷村',
   location: '江苏省常熟市支塘镇',
   area: '3平方公里',
@@ -27,90 +27,90 @@ export const historyTimeline = [
     year: '1966',
     title: '新任带头人',
     desc: '22岁的常德盛出任蒋巷大队大队长。面对千余亩贫瘠土地和贫穷的村民，他立下铮铮誓言："穷不会生根，富不是天生"。当时的蒋巷村是一个血吸虫流行、偏僻闭塞的苦地方，人均年收入不到70元。',
-    image: '/images/history/1966-new-leader.svg'
+    image: '/images/history/1966-new-leader.jpg'
   },
   {
     year: '1968',
     title: '治水改土',
     desc: '常德盛带领全体村民实施"治水改土"工程。全村不足400个劳力，凭借一条扁担两只筐，历时十余年，累计完成50多万土石方，将1700亩低洼地填高一米，把十年九涝的荒地变成了旱涝保收的高产田。',
-    image: '/images/history/1968-transforming-land.svg'
+    image: '/images/history/1968-transforming-land.jpg'
   },
   {
     year: '1980',
     title: '建设新房',
     desc: '实施统一规划，推倒茅草屋、泥瓦房，开始建设楼房。这是村民居住条件的第一次重大升级，迈出了改善民生的第一步。',
-    image: '/images/history/1980-building-homes.svg'
+    image: '/images/history/1980-building-homes.jpg'
   },
   {
     year: '1983',
     title: '创办企业',
     desc: '恢复乡村行政建制，大队改为村民委员会，建立第一个村办企业——镇南塑料厂。常德盛走南闯北推销产品，常常一个来回就是1000多公里，迈出了"进军二产"的关键一步。',
-    image: '/images/history/1983-first-enterprise.svg'
+    image: '/images/history/1983-first-enterprise.jpg'
   },
   {
     year: '1993',
     title: '关停化工厂',
     desc: '村里投资500万元办了个化工厂，投产两个月就赚回100多万元。但工厂排放的废气让人寝食难安，废水毒死鱼虾。常德盛果断决定关停化工厂，他说："环境是村子的根，宁可少赚钱，也不能让环境变差。"',
-    image: '/images/history/1993-closing-chemical.svg'
+    image: '/images/history/1993-closing-chemical.jpg'
   },
   {
     year: '1995',
     title: '别墅社区',
     desc: '开始建设统一规划的两层别墅（每栋220平方米），每栋造价约30万元，仅以12.8万元卖给村民，差额由村集体补贴。全村192户家家住上了别墅。',
-    image: '/images/history/1995-villa-community.svg'
+    image: '/images/history/1995-villa-community.jpg'
   },
   {
     year: '1999',
     title: '蒋巷新村',
     desc: '完成"蒋巷新村"别墅区建设，实现村民集中居住。同时建成158套老年公寓，免费供老人使用，被评为"江苏省村镇文明住宅小区"。',
-    image: '/images/history/1999-new-village.svg'
+    image: '/images/history/1999-new-village.jpg'
   },
   {
     year: '2004',
     title: '旅游旺家',
     desc: '温家宝总理视察蒋巷村，称赞"全面发展"。建成占地600多亩的蒋巷生态园，正式走上"旅游旺家"的发展新路。',
-    image: '/images/history/2004-tourism-takes-off.svg'
+    image: '/images/history/2004-tourism-takes-off.jpg'
   },
   {
     year: '2005',
     title: '循环经济',
     desc: '建成日处理能力300吨的生活污水处理站和常熟市第一座秸秆气化站，开始推行循环经济。主干道两侧建成了26公里生态林带。',
-    image: '/images/history/2005-circular-economy.svg'
+    image: '/images/history/2005-circular-economy.jpg'
   },
   {
     year: '2011',
     title: '国家4A级景区',
     desc: '成功创建国家4A级旅游景区，被国家住建部和国家旅游局共同评为"全国特色景观旅游名村"。',
-    image: '/images/history/2011-4a-scenic.svg'
+    image: '/images/history/2011-4a-scenic.jpg'
   },
   {
     year: '2015',
     title: '有机农业',
     desc: '开始将1200亩水稻田全部转为有机种植——不施化肥、不喷农药。采用"稻鸭鹅共作"生态模式，以绿萍为天然肥料。"蒋巷大米"从每公斤6元涨到20元，年产49万公斤。',
-    image: '/images/history/2015-organic-agriculture.svg'
+    image: '/images/history/2015-organic-agriculture.jpg'
   },
   {
     year: '2018',
     title: '蒋巷书院',
     desc: '蒋巷书院对外试营业，28间现代简约又不失野趣的精致民宿亮相。同时投资3000多万元建设蒋巷护理院，规划床位250个，配套6000平方米绿化公园。',
-    image: '/images/history/2018-academy.svg'
+    image: '/images/history/2018-academy.jpg'
   },
   {
     year: '2019',
     title: '全国乡村旅游重点村',
     desc: '入选首批全国乡村旅游重点村名单。年吸引游客超20万人次，旅游收入超千万元。',
-    image: '/images/history/2019-key-village.svg'
+    image: '/images/history/2019-key-village.jpg'
   },
   {
     year: '2021',
     title: '零碳数字蒋巷',
     desc: '启动"零碳数字蒋巷乡村振兴项目"，架设2万平方米光伏板，最高发电量可达1亿千瓦时，年均减少碳排放2825吨，探索可复制可推广的绿色发展之路。',
-    image: '/images/history/2021-zero-carbon.svg'
+    image: '/images/history/2021-zero-carbon.jpg'
   },
   {
     year: '2022',
     title: '十亿里程碑',
     desc: '全村经济总产值突破10亿元，村级稳定性收入2850万元，村民人均可支配收入6.25万元，人均股份制分红1万元，实现养老、医疗等五大保险全覆盖。村集体净资产超3.6亿元。',
-    image: '/images/history/1966-new-leader.svg'
+    image: '/images/history/2022-milestone.jpg'
   }
 ]

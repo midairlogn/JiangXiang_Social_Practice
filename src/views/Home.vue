@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <div class="home">
     <section class="hero">
-      <video class="hero__bg" autoplay muted loop playsinline poster="/images/hero/hero-bg.svg">
+      <video class="hero__bg" autoplay muted loop playsinline poster="/images/hero/hero-bg.jpg">
         <source src="/videos/jiangxiang-social-practice.mp4" type="video/mp4" />
       </video>
       <div class="hero__overlay"></div>
