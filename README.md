@@ -2,6 +2,12 @@
 
 A responsive web application showcasing Jiangxiang Village (蒋巷村) — a model of rural revitalization in Changshu, Jiangsu Province, China. Built as a social practice project covering the village's history, honors, eco-tourism, agricultural products, and photography.
 
+<div align="center">
+
+**English** | [**中文简体**](README_ZH.md)
+
+</div>
+
 ## Features
 
 - **Promotional Video** — Curated video gallery with a custom Video.js player and embed code generator for WeChat mini-programs
