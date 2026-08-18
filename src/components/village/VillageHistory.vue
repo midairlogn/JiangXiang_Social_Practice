@@ -129,12 +129,6 @@ defineProps({
     margin-bottom: 2px;
   }
 
-  &__title-cn {
-    font-size: 0.85rem;
-    color: #9ca3af;
-    margin-bottom: 0.5rem;
-  }
-
   &__desc {
     font-size: 0.85rem;
     color: #4b5563;

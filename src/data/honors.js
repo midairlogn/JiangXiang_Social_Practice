@@ -1,6 +1,6 @@
 export const villageHonors = [
   { title: '全国文明村', level: '国家级', year: '', icon: 'Medal', desc: '在文明建设、乡村治理和社会发展方面取得突出成就。' },
-  { title: '国家级生态村', level: '国家级', year: '', icon: 'Leaf', desc: '在生态保护、绿色发展和可持续环境实践方面获得认可。' },
+  { title: '国家级生态村', level: '国家级', year: '', icon: 'Sunrise', desc: '在生态保护、绿色发展和可持续环境实践方面获得认可。' },
   { title: '中国最有魅力休闲乡村', level: '国家级', year: '', icon: 'Star', desc: '凭借优美的自然风光和深厚的文化底蕴入选。' },
   { title: '国家4A级旅游景区', level: '国家级', year: '2011年', icon: 'MapLocation', desc: '拥有完善的旅游基础设施和优质服务的高等级景区。' },
   { title: '全国乡村旅游重点村', level: '国家级', year: '2019年', icon: 'Guide', desc: '首批全国乡村旅游重点村之一。' },
@@ -13,7 +13,7 @@ export const villageHonors = [
   { title: '中国人居环境范例奖', level: '国家级', year: '', icon: 'HomeFilled', desc: '在人居环境改善方面的杰出成就奖。' },
   { title: '亚太环保协会低碳农业奖', level: '国际', year: '', icon: 'Lightning', desc: '在低碳农业实践方面获得国际认可。' },
   { title: '全国人口与计划生育示范村', level: '国家级', year: '', icon: 'UserFilled', desc: '人口与计划生育工作的模范村庄。' },
-  { title: '江苏省最美乡村', level: '省级', year: '', icon: 'Flower', desc: '江苏省最美乡村之一。' },
+  { title: '江苏省最美乡村', level: '省级', year: '', icon: 'Sunny', desc: '江苏省最美乡村之一。' },
   { title: '江苏省文明村标兵', level: '省级', year: '', icon: 'Trophy', desc: '江苏省文明建设的标杆村庄。' }
 ]
 

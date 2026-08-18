@@ -44,7 +44,7 @@
             </div>
             <div class="honors__card-body">
               <h4>{{ honor.title }}</h4>
-              <span class="honors__level honors__level--national">{{ honor.level }}</span>
+              <span class="honors__level" :class="`honors__level--${levelClass(honor.level)}`">{{ honor.level }}</span>
               <p class="honors__card-desc">{{ honor.desc }}</p>
             </div>
           </div>
@@ -165,12 +165,6 @@ const openModal = (honor) => {
     margin-bottom: 2px;
   }
 
-  &__card-cn {
-    font-size: 0.8rem;
-    color: #9ca3af;
-    margin-bottom: 0.5rem;
-  }
-
   &__card-desc {
     font-size: 0.8rem;
     color: #6b7280;
@@ -274,12 +268,6 @@ const openModal = (honor) => {
     color: #1f6d3d;
     font-size: 1.05rem;
     margin-bottom: 2px;
-  }
-
-  &__visit-cn {
-    font-size: 0.85rem;
-    color: #9ca3af;
-    margin-bottom: 0.5rem;
   }
 
   &__quote {

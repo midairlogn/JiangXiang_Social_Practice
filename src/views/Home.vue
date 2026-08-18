@@ -74,7 +74,6 @@
     <section class="motto section-padding" style="background: linear-gradient(135deg, #1f6d3d, #16482b);">
       <div class="container motto__container">
         <p class="motto__text">"{{ store.overview.motto }}"</p>
-        <p class="motto__cn">{{ store.overview.mottoCN }}</p>
         <p class="motto__author">— 蒋巷村党委第一书记 常德盛</p>
       </div>
     </section>
@@ -329,12 +328,6 @@ const navCards = [
     font-size: 1.05rem;
   }
 
-  &__cn {
-    color: #9ca3af;
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-  }
-
   &__desc {
     font-size: 0.8rem;
     color: #6b7280;
@@ -426,16 +419,6 @@ const navCards = [
 
     @media (max-width: 768px) {
       font-size: 1.25rem;
-    }
-  }
-
-  &__cn {
-    font-size: 1.25rem;
-    color: #88cf9f;
-    margin-bottom: 1rem;
-
-    @media (max-width: 768px) {
-      font-size: 1rem;
     }
   }
 

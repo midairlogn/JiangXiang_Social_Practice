@@ -187,12 +187,6 @@ const handleSelect = (product) => {
     }
   }
 
-  &__cn {
-    font-size: 0.8rem;
-    color: #9ca3af;
-    margin-bottom: 0.5rem;
-  }
-
   &__price {
     font-size: 1.1rem;
     font-weight: 700;
@@ -247,12 +241,6 @@ const handleSelect = (product) => {
   &__detail-body h2 {
     color: #1f6d3d;
     font-size: 1.5rem;
-  }
-
-  &__detail-cn {
-    font-size: 0.9rem;
-    color: #9ca3af;
-    margin-bottom: 0.5rem;
   }
 
   &__detail-price {

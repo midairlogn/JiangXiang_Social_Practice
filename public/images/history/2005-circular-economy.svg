@@ -1,1 +1,24 @@
-﻿<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='800' height='600' fill='#1f6d3d'/><text x='400' y='300' font-size='24' fill='#fff' text-anchor='middle' font-family='sans-serif'>Jiangxiang Village</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f6d3d"/>
+      <stop offset="50%" stop-color="#16482b"/>
+      <stop offset="100%" stop-color="#16482b"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1.5" fill="#fff" opacity="0.03"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#dots)"/>
+  
+      <line x1="100" y1="300" x2="700" y2="300" stroke="#fff" stroke-width="3" opacity="0.2"/>
+      <circle cx="150" cy="300" r="10" fill="#fff" opacity="0.4"/>
+      <circle cx="300" cy="300" r="10" fill="#fff" opacity="0.4"/>
+      <circle cx="450" cy="300" r="10" fill="#fff" opacity="0.4"/>
+      <circle cx="600" cy="300" r="10" fill="#fff" opacity="0.4"/>
+      <circle cx="400" cy="300" r="16" fill="#d4a017"/>
+    
+  <text x="400" y="300" font-size="32" fill="#fff" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-weight="700" opacity="0.95">村史回顾</text>
+  <text x="400" y="340" font-size="14" fill="#fff" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" opacity="0.4">蒋巷村 · 六朝松小纵队</text>
+</svg>

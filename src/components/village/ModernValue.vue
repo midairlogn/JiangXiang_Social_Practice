@@ -1,8 +1,7 @@
 <template>
   <div class="modern-value">
     <div class="modern-value__intro">
-      <p class="modern-value__motto">{{ overview.motto }}</p>
-      <p class="modern-value__motto-cn">{{ overview.mottoCN }}</p>
+      <p class="modern-value__motto">"{{ overview.motto }}"</p>
     </div>
 
     <div class="modern-value__stats">
@@ -91,11 +90,6 @@ defineProps({
     font-style: italic;
     margin-bottom: 0.5rem;
     line-height: 1.6;
-  }
-
-  &__motto-cn {
-    font-size: 1rem;
-    color: #88cf9f;
   }
 
   &__stats {
