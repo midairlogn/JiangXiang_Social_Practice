@@ -19,6 +19,9 @@ All core features are built and the project compiles successfully (`npm run buil
 - [x] Video renamed to ASCII filename (`jiangxiang-social-practice.mp4`)
 - [x] `resources/` added to `.gitignore`
 - [x] `README.md` and `README_ZH.md` written
+- [x] Full UI and content localization to Chinese
+- [x] Team name "六朝松小纵队" integrated (photo credits, footer, hero tagline)
+- [x] Removed redundant bilingual fields (titleCN/nameCN/leaderCN), Chinese is primary
 
 ---
 
@@ -84,7 +87,10 @@ src/
 - **Data files**: camelCase (`history.js`)
 - **Styles**: scoped SCSS in `.vue` files, kebab-case class names
 - **Image paths**: `/images/<category>/<name>.<ext>` (relative to `public/`)
-- **Commits**: conventional commits (`feat:`, `fix:`, `docs:`, `chore:`)
+- **Content language**: Chinese (中文) for all UI text and data content
+- **Code identifiers**: English (variable names, CSS classes, component names)
+- **Commit messages**: English, conventional commits (`feat:`, `fix:`, `docs:`, `chore:`)
+- **Team name**: 六朝松小纵队 (used in photo credits, footer copyright, hero tagline)
 
 ## Git Workflow
 
