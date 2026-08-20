@@ -4,7 +4,7 @@
   area: '3平方公里',
   population: '878',
   households: '200',
-  coordinates: [31.5686, 121.0492],
+  coordinates: [31.5052, 120.9723],
   partySecretary: '蒋玉英',
   firstSecretary: '常德盛',
   motto: '穷不会生根，富不是天生。天不能改，地一定要换。',
