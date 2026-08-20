@@ -1,19 +1,44 @@
 <template>
-  <div class="village-page" style="padding-top: 64px;">
+  <div class="village-page">
     <section class="village-page__header">
       <div class="container">
         <h1 class="section-title">村庄介绍</h1>
-        <p class="section-subtitle">蒋巷村的历史、荣誉与现代价值</p>
+        <p class="section-subtitle">历史 · 荣誉 · 现代价值——读懂蒋巷振兴之路</p>
         <div class="village-page__overview">
-          <div class="village-page__info">
-            <h2>{{ store.overview.name }}</h2>
-            <p class="village-page__location">📍 {{ store.overview.location }}</p>
-            <div class="village-page__stats">
-              <span><strong>{{ store.overview.households }}</strong> 户</span>
-              <span><strong>{{ store.overview.population }}</strong> 人</span>
-              <span><strong>{{ store.overview.area }}</strong> 面积</span>
+          <div class="village-page__info-card">
+            <div class="village-page__info-head">
+              <h2>{{ store.overview.name }}</h2>
+              <p class="village-page__location">
+                <el-icon><LocationInformation /></el-icon>
+                {{ store.overview.location }}
+              </p>
             </div>
-            <p class="village-page__party">村党委第一书记：{{ store.overview.partySecretary }}</p>
+
+            <div class="village-page__stats">
+              <div class="village-page__stat">
+                <div class="village-page__stat-icon"><el-icon><HomeFilled /></el-icon></div>
+                <div class="village-page__stat-num">{{ store.overview.households }}</div>
+                <div class="village-page__stat-label">户农家</div>
+              </div>
+              <div class="village-page__stat">
+                <div class="village-page__stat-icon"><el-icon><User /></el-icon></div>
+                <div class="village-page__stat-num">{{ store.overview.population }}</div>
+                <div class="village-page__stat-label">常住人口</div>
+              </div>
+              <div class="village-page__stat">
+                <div class="village-page__stat-icon"><el-icon><Crop /></el-icon></div>
+                <div class="village-page__stat-num">{{ store.overview.area }}</div>
+                <div class="village-page__stat-label">村域面积</div>
+              </div>
+            </div>
+
+            <div class="village-page__party">
+              <div class="village-page__party-avatar"><el-icon :size="20"><Avatar /></el-icon></div>
+              <div class="village-page__party-text">
+                <span>村党委第一书记</span>
+                <strong>{{ store.overview.partySecretary }}</strong>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -65,56 +90,204 @@ const activeTab = ref('history')
   &__header {
     background: linear-gradient(135deg, #1f6d3d, #16482b);
     color: #fff;
-    padding: 3rem 0 2rem;
+    padding: calc(64px + 3rem) 0 2rem;
 
     .section-title { color: #fff; }
     .section-subtitle { color: rgba(255, 255, 255, 0.7); }
   }
 
   &__overview {
-    margin-top: 1.5rem;
-  }
-
-  &__info {
-    h2 {
-      color: #88cf9f;
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-  }
-
-  &__location {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-  }
-
-  &__stats {
+    margin-top: 2rem;
     display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
+    justify-content: center;
+  }
 
-    span {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 0.9rem;
+  &__info-card {
+    width: 100%;
+    max-width: 760px;
+    padding: 2.25rem 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  }
 
-      strong {
-        color: #d4a017;
-        font-size: 1.25rem;
+  &__info-head {
+    h2 {
+      color: #fff;
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 48px;
+        height: 3px;
+        margin: 0.5rem auto 0;
+        background: #d4a017;
+        border-radius: 2px;
       }
     }
   }
 
+  &__location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    padding: 0.35rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.75rem 0;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__stat {
+    padding: 1.25rem 0.5rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: transform 0.25s;
+
+    &:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__stat-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 160, 23, 0.18);
+    color: #f0c674;
+  }
+
+  &__stat-num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+  }
+
+  &__stat-label {
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.65);
+  }
+
   &__party {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1.25rem 0.6rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(212, 160, 23, 0.15);
+    border: 1px solid rgba(212, 160, 23, 0.35);
+  }
+
+  &__party-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #d4a017;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__party-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+
+    span {
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    strong {
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
   }
 
   &__tabs {
+    :deep(.el-tabs__header) {
+      margin-bottom: 2.5rem;
+    }
+
+    :deep(.el-tabs__nav-wrap)::after {
+      display: none;
+    }
+
+    :deep(.el-tabs__nav-wrap) {
+      display: flex;
+      justify-content: center;
+    }
+
+    :deep(.el-tabs__nav-scroll) {
+      overflow: visible;
+    }
+
+    :deep(.el-tabs__nav) {
+      display: inline-flex !important;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    :deep(.el-tabs__active-bar) {
+      display: none;
+    }
+
     :deep(.el-tabs__item) {
+      height: auto;
+      line-height: 1.5;
+      padding: 0.6rem 1.5rem !important;
+      margin: 0;
+      border: 1px solid #d1d5db !important;
+      border-radius: 999px !important;
+      background: #fff;
+      color: #6b7280;
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: 600;
+      transition: all 0.25s;
+
+      &:hover {
+        border-color: #88cf9f;
+        color: #1f6d3d;
+      }
+
+      &.is-active {
+        background: #1f6d3d;
+        border-color: #1f6d3d;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(31, 109, 61, 0.25);
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="map-page" style="padding-top: 64px;">
+  <div class="map-page">
     <section class="map-page__header">
       <div class="container">
         <h1 class="section-title">导览地图</h1>
@@ -65,7 +65,7 @@ const categoryColors = [
   &__header {
     background: linear-gradient(135deg, #1f6d3d, #16482b);
     color: #fff;
-    padding: 3rem 0 2rem;
+    padding: calc(64px + 3rem) 0 2rem;
 
     .section-title { color: #fff; }
     .section-subtitle { color: rgba(255, 255, 255, 0.7); }

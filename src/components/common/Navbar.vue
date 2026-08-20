@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" :class="{ 'navbar--scrolled': scrolled, 'navbar--solid': !isHome }">
+  <nav class="navbar" :class="{ 'navbar--scrolled': scrolled }">
     <div class="navbar__container">
       <router-link to="/" class="navbar__logo">
         <span class="navbar__logo-icon">🌾</span>
@@ -25,14 +25,10 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { ref, onMounted, onUnmounted } from 'vue'
 
-const route = useRoute()
 const scrolled = ref(false)
 const mobileMenuOpen = ref(false)
-
-const isHome = computed(() => route.path === '/')
 
 const navItems = [
   { label: '首页', path: '/', icon: 'HomeFilled' },
@@ -73,9 +69,10 @@ onUnmounted(() => {
   transition: all 0.3s ease;
 
   &--solid, &--scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
   }
 
   &__container {
