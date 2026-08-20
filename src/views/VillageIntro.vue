@@ -33,10 +33,19 @@
             </div>
 
             <div class="village-page__party">
-              <div class="village-page__party-avatar"><el-icon :size="20"><Avatar /></el-icon></div>
-              <div class="village-page__party-text">
-                <span>村党委第一书记</span>
-                <strong>{{ store.overview.partySecretary }}</strong>
+              <div class="village-page__party-item">
+                <div class="village-page__party-avatar"><el-icon :size="20"><Avatar /></el-icon></div>
+                <div class="village-page__party-text">
+                  <span>村党委书记</span>
+                  <strong>{{ store.overview.partySecretary }}</strong>
+                </div>
+              </div>
+              <div class="village-page__party-item">
+                <div class="village-page__party-avatar"><el-icon :size="20"><Avatar /></el-icon></div>
+                <div class="village-page__party-text">
+                  <span>党委第一书记（老书记）</span>
+                  <strong>{{ store.overview.firstSecretary }}</strong>
+                </div>
               </div>
             </div>
           </div>
@@ -197,12 +206,19 @@ const activeTab = ref('history')
 
   &__party {
     display: inline-flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.6rem 1.25rem 0.6rem 0.6rem;
+    gap: 1.25rem;
+    padding: 0.6rem 1.25rem;
     border-radius: 999px;
     background: rgba(212, 160, 23, 0.15);
     border: 1px solid rgba(212, 160, 23, 0.35);
+  }
+
+  &__party-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
   }
 
   &__party-avatar {

@@ -42,7 +42,7 @@
       <div class="modern-value__value-card">
         <div class="modern-value__value-icon">🤝</div>
         <h4>共同富裕</h4>
-        <p>192户家家住别墅。人均收入62,500元，年均分红1万元。五险全覆盖。"共同富裕路上，绝不让一个人掉队。"</p>
+        <p>200户家家住别墅。人均收入68,000元，年均分红1万元。五险全覆盖。"共同富裕路上，绝不让一个人掉队。"</p>
       </div>
       <div class="modern-value__value-card">
         <div class="modern-value__value-icon">📚</div>

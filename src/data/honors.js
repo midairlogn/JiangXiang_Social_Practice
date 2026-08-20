@@ -14,7 +14,8 @@ export const villageHonors = [
   { title: '亚太环保协会低碳农业奖', level: '国际', year: '', icon: 'Lightning', desc: '在低碳农业实践方面获得国际认可。' },
   { title: '全国人口与计划生育示范村', level: '国家级', year: '', icon: 'UserFilled', desc: '人口与计划生育工作的模范村庄。' },
   { title: '江苏省最美乡村', level: '省级', year: '', icon: 'Sunny', desc: '江苏省最美乡村之一。' },
-  { title: '江苏省文明村标兵', level: '省级', year: '', icon: 'Trophy', desc: '江苏省文明建设的标杆村庄。' }
+  { title: '江苏省文明村标兵', level: '省级', year: '', icon: 'Trophy', desc: '江苏省文明建设的标杆村庄。' },
+  { title: '全国党建引领乡村治理典型案例', level: '国家级', year: '2025年', icon: 'Medal', desc: '村党委探索"乡情工作法"入选全国典型案例，为乡村善治提供可复制可推广的"蒋巷路径"。' }
 ]
 
 export const leaderHonors = [
@@ -28,9 +29,11 @@ export const leaderHonors = [
 ]
 
 export const leadershipVisits = [
-  { leader: '温家宝总理', year: '2004年', quote: '你这个村叫做全面发展，农业发展、乡镇企业发展、农民富裕。' },
-  { leader: '曾庆红副主席', year: '2004年', quote: '多好的地方啊，这就是现代化新农村。' },
-  { leader: '贾庆林主席', year: '2006年', quote: '高度赞扬常书记热爱农村、热爱农业、热爱农民的精神。' },
-  { leader: '李鹏委员长', year: '2007年', quote: '蒋巷村民真幸福！' },
-  { leader: '刘云山部长', year: '2010年', quote: '亲笔题词："幸福新家园，和谐文明村"。' }
+  { leader: '温家宝总理', year: '2004年3月', quote: '你这个村叫做全面发展，农业发展、乡镇企业发展，农民富裕。' },
+  { leader: '曾庆红副主席', year: '2004年11月', quote: '多好的地方啊，这就是现代化新农村。' },
+  { leader: '贾庆林主席', year: '2006年11月', quote: '高度赞扬常书记热爱农村、热爱农业、热爱农民的精神。' },
+  { leader: '李鹏前委员长', year: '2007年5月', quote: '蒋巷村民真幸福！' },
+  { leader: '华建敏副委员长', year: '2008年7月', quote: '对蒋巷村社会保障体系全覆盖非常赞赏。' },
+  { leader: '刘云山部长', year: '2010年5月', quote: '亲笔题词："幸福新家园，和谐文明村"。' },
+  { leader: '赵乐际部长', year: '2015年7月', quote: '村一级党建关键要有个好支部、好的班子、好的带头人，蒋巷村有今天，有个好的党组织、好的带头人，也就是有个常德盛同志，他真是一位可敬的优秀共产党员。' }
 ]

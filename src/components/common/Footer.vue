@@ -5,7 +5,7 @@
         <div class="footer__col footer__col--brand">
           <h3 class="footer__title">🌾 蒋巷村</h3>
           <p class="footer__desc">
-            江苏省常熟市乡村振兴典范。从血吸虫病流行的穷乡僻壤到产值十亿的生态社区——常德盛带领下的蒋巷奇迹。
+            江苏省常熟市乡村振兴典范。从血吸虫病流行的穷乡僻壤到产值十亿的生态社区——两代书记接力书写的蒋巷奇迹。
           </p>
           <p class="footer__motto">"穷不会生根，富不是天生。"</p>
         </div>
@@ -34,8 +34,8 @@
         <div class="footer__col">
           <h4 class="footer__subtitle">村庄数据</h4>
           <ul class="footer__stats">
-            <li><span>192</span> 户</li>
-            <li><span>875</span> 人</li>
+            <li><span>200</span> 户</li>
+            <li><span>878</span> 人</li>
             <li><span>3 km²</span> 面积</li>
             <li><span>60%+</span> 绿化覆盖率</li>
           </ul>

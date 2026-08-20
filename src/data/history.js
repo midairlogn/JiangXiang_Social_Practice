@@ -2,14 +2,15 @@
   name: '蒋巷村',
   location: '江苏省常熟市支塘镇',
   area: '3平方公里',
-  population: '875',
-  households: '192',
+  population: '878',
+  households: '200',
   coordinates: [31.5686, 121.0492],
-  partySecretary: '常德盛',
+  partySecretary: '蒋玉英',
+  firstSecretary: '常德盛',
   motto: '穷不会生根，富不是天生。天不能改，地一定要换。',
   stats: [
-    { label: '经济总产值', value: '10亿', unit: '元', year: '2022年' },
-    { label: '人均可支配收入', value: '62,500', unit: '元', year: '2022年' },
+    { label: '经济总产值', value: '10亿', unit: '元', year: '2024年' },
+    { label: '人均可支配收入', value: '68,000', unit: '元', year: '2024年' },
     { label: '村集体净资产', value: '3.6亿', unit: '元', year: '2024年' },
     { label: '绿化覆盖率', value: '60', unit: '%', year: '2024年' }
   ],
@@ -103,6 +104,12 @@ export const historyTimeline = [
   },
   {
     year: '2021',
+    title: '新老交接',
+    desc: '1月10日，常德盛正式卸任村党委书记，被聘为党委第一书记。在村内工作25年的蒋玉英接任村党委书记、村委会主任，成为蒋巷村新一任"当家人"。常德盛在蒋巷先后担任7年大队长、48年村党组织书记，带领村庄从贫困走向富裕。新老班子的平稳交接，标志着蒋巷村进入接力振兴的新阶段。',
+    image: '/images/history/2021-leadership-transition.jpg'
+  },
+  {
+    year: '2021',
     title: '零碳数字蒋巷',
     desc: '启动"零碳数字蒋巷乡村振兴项目"，架设2万平方米光伏板，最高发电量可达1亿千瓦时，年均减少碳排放2825吨，探索可复制可推广的绿色发展之路。',
     image: '/images/history/2021-zero-carbon.jpg'
@@ -112,5 +119,11 @@ export const historyTimeline = [
     title: '十亿里程碑',
     desc: '全村经济总产值突破10亿元，村级稳定性收入2850万元，村民人均可支配收入6.25万元，人均股份制分红1万元，实现养老、医疗等五大保险全覆盖。村集体净资产超3.6亿元。',
     image: '/images/history/2022-milestone.jpg'
+  },
+  {
+    year: '2024',
+    title: '持续共富',
+    desc: '全村社会总产值稳居10亿元，村集体总收入2862万元，村民人均收入达6.8万元，人均股份分红1万元，村集体净资产超3.6亿元。参与读书活动家庭达185户，占全村98%。蒋玉英带领新班子探索"乡情工作法"，入选全国党建引领乡村治理典型案例，蒋巷振兴之路越走越宽。',
+    image: '/images/history/2024-sustainable-prosperity.jpg'
   }
 ]

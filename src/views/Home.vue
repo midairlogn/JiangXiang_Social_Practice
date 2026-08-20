@@ -10,7 +10,7 @@
         <h1 class="hero__title">蒋巷村</h1>
         <h2 class="hero__subtitle">新时代的桃花源</h2>
         <p class="hero__desc">
-          从血吸虫病流行的穷乡僻壤到产值十亿的生态社区——探索常德盛带领下的蒋巷乡村振兴奇迹。
+          从血吸虫病流行的穷乡僻壤到产值十亿的生态社区——探索蒋巷村两代书记接力书写的乡村振兴奇迹。
         </p>
         <div class="hero__actions">
           <router-link to="/video" class="hero__btn hero__btn--primary">
