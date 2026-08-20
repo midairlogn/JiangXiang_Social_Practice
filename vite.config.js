@@ -10,6 +10,10 @@ export default defineConfig({
     }
   },
   base: './',
+  server: {
+    port: Number(process.env.PORT) || 5173,
+    open: true
+  },
   build: {
     chunkSizeWarningLimit: 1500,
     rollupOptions: {

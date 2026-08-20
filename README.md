@@ -66,6 +66,19 @@ npm run dev
 
 The site will be available at `http://localhost:5173`.
 
+#### Custom Port
+
+Set the `PORT` environment variable (any platform) or pass Vite's `--port` flag:
+
+```bash
+# Environment variable (default 5173)
+# macOS/Linux:  PORT=8080 npm run dev
+# Windows (PS): $env:PORT=8080; npm run dev
+
+# Or via Vite flag (works on all platforms)
+npm run dev -- --port 8080
+```
+
 ### Build
 
 ```bash

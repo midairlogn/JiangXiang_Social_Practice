@@ -58,7 +58,8 @@ Most images in `public/images/` are SVG placeholders (green background, "Jiangxi
 
 ```bash
 npm install          # Install dependencies
-npm run dev          # Start dev server (http://localhost:5173)
+npm run dev          # Start dev server (default http://localhost:5173)
+npm run dev -- --port 8080   # Start on a custom port (or set PORT env var)
 npm run build        # Production build → dist/
 npm run preview      # Preview production build
 ```
