@@ -97,11 +97,14 @@ const navCards = [
 .hero {
   position: relative;
   height: 100vh;
-  min-height: 600px;
+  min-height: 640px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  box-sizing: border-box;
+  padding-top: 80px;
+  padding-bottom: 130px;
 
   &__bg {
     position: absolute;
