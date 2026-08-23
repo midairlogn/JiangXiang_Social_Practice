@@ -2,8 +2,8 @@
   <div class="video-page">
     <section class="video-page__header">
       <div class="container">
-        <h1 class="section-title">专题视频</h1>
-        <p class="section-subtitle">仅收录来源可核验的官方媒体视频页面</p>
+        <h1 class="section-title">宣传片</h1>
+        <p class="section-subtitle">精选视频，多维度展示蒋巷村风采</p>
       </div>
     </section>
 
