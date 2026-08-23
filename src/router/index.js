@@ -11,7 +11,7 @@ const routes = [
     path: '/video',
     name: 'video',
     component: () => import('@/views/PromotionalVideo.vue'),
-    meta: { title: '宣传片' }
+    meta: { title: '专题视频' }
   },
   {
     path: '/map',

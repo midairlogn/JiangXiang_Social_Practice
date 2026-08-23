@@ -12,6 +12,10 @@
       </button>
     </div>
 
+    <p v-if="activeCategory?.description" class="product-showcase__category-description">
+      {{ activeCategory.description }}
+    </p>
+
     <div class="product-showcase__grid">
       <div
         v-for="product in filtered"
@@ -20,7 +24,7 @@
         @click="handleSelect(product)"
       >
         <div class="product-showcase__image">
-          <img :src="product.images[0]" :alt="product.name" loading="lazy" />
+          <img :src="product.images[0]" :alt="product.imageAlts?.[0] || product.imageAlt || product.name" loading="lazy" />
           <span class="product-showcase__badge">{{ product.badge }}</span>
         </div>
         <div class="product-showcase__body">
@@ -37,11 +41,11 @@
       </div>
     </div>
 
-    <el-drawer v-model="drawerVisible" :title="selectedProduct?.name" size="55%">
+    <el-drawer v-model="drawerVisible" :title="selectedProduct?.name" size="min(560px, 92vw)">
       <div v-if="selectedProduct" class="product-showcase__detail">
         <el-carousel :interval="4000" height="300px" class="product-showcase__carousel">
-          <el-carousel-item v-for="img in selectedProduct.images" :key="img">
-            <img :src="img" :alt="selectedProduct.name" class="product-showcase__carousel-img" />
+          <el-carousel-item v-for="(img, index) in selectedProduct.images" :key="img">
+            <img :src="img" :alt="selectedProduct.imageAlts?.[index] || selectedProduct.imageAlt || selectedProduct.name" class="product-showcase__carousel-img" />
           </el-carousel-item>
         </el-carousel>
 
@@ -62,11 +66,6 @@
             </span>
           </div>
 
-          <div class="product-showcase__packaging">
-            <h4>包装设计方案</h4>
-            <img :src="selectedProduct.packagingDesign" :alt="selectedProduct.name + ' 包装设计'" loading="lazy" />
-            <p>{{ selectedProduct.packagingDesc }}</p>
-          </div>
         </div>
       </div>
     </el-drawer>
@@ -74,10 +73,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { Check } from '@element-plus/icons-vue'
 
-defineProps({
+const props = defineProps({
   products: { type: Array, required: true },
   categories: { type: Array, required: true },
   active: { type: String, default: 'all' },
@@ -88,6 +87,7 @@ const emit = defineEmits(['update:active', 'select'])
 
 const drawerVisible = ref(false)
 const selectedProduct = ref(null)
+const activeCategory = computed(() => props.categories.find(category => category.value === props.active))
 
 const handleSelect = (product) => {
   selectedProduct.value = product
@@ -104,6 +104,18 @@ const handleSelect = (product) => {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 2rem;
+  }
+
+  &__category-description {
+    max-width: 760px;
+    margin: -0.75rem auto 2rem;
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid #88cf9f;
+    border-radius: 0 10px 10px 0;
+    background: #f3fbf5;
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.75;
   }
 
   &__category {
@@ -267,28 +279,5 @@ const handleSelect = (product) => {
     margin-bottom: 1.5rem;
   }
 
-  &__packaging {
-    background: #f9fafb;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-top: 1rem;
-
-    h4 {
-      color: #1f6d3d;
-      margin-bottom: 1rem;
-    }
-
-    img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      color: #6b7280;
-      font-size: 0.85rem;
-      line-height: 1.6;
-    }
-  }
 }
 </style>

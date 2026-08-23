@@ -8,12 +8,8 @@
     badge: '绿色食品认证',
     desc: '产自1200亩认证有机稻田。不施化肥、不喷农药，采用"稻鸭鹅共作"生态模式，以绿萍为天然肥料。年产49万公斤，品质提升后从每公斤6元涨到20元仍供不应求。',
     features: ['有机认证', '稻鸭鹅共作', '绿萍天然肥料', '一季轮作制'],
-    images: [
-      '/images/products/organic-rice.jpg',
-      '/images/products/packaging-organic-rice.jpg'
-    ],
-    packagingDesign: '/images/products/packaging-organic-rice.jpg',
-    packagingDesc: '环保牛皮纸包装，主色调为金黄稻田色，印有蒋巷村标志。突出有机认证标志和村庄50余年农业传承。'
+    images: ['/images/products/organic-rice.jpg'],
+    imageAlt: '白米近景（通用产品示意）',
   },
   {
     id: 2,
@@ -26,10 +22,13 @@
     features: ['有机堆肥', '每日采摘', '可采摘体验', '循环经济产品'],
     images: [
       '/images/products/green-vegetables.jpg',
-      '/images/products/packaging-green-vegetables.jpg'
+      '/media_new/product-showcase/cherry-tomatoes-vine.webp'
     ],
-    packagingDesign: '/images/products/packaging-green-vegetables.jpg',
-    packagingDesc: '透气网袋包装，配再生纸标签。自然绿色调体现生态种植方式。'
+    imageAlt: '南方市场常见绿色蔬菜（通用产品示意）',
+    imageAlts: [
+      '南方市场常见绿色蔬菜（通用产品示意）',
+      '藤蔓上处于不同成熟阶段的小番茄'
+    ],
   },
   {
     id: 3,
@@ -40,12 +39,8 @@
     badge: '传统工艺',
     desc: '以蒋巷自产有机大米为原料，采用江南传统工艺酿造。醇厚甘甜的米酒，承载着水乡文化的韵味。',
     features: ['有机大米为基', '传统酿造', '江南风味', '手工制作'],
-    images: [
-      '/images/products/rice-wine.jpg',
-      '/images/products/packaging-rice-wine.jpg'
-    ],
-    packagingDesign: '/images/products/packaging-rice-wine.jpg',
-    packagingDesc: '典雅陶瓷瓶身，书法风格标签。青花瓷灵感设计，呈现江南水乡美学。'
+    images: ['/images/products/rice-wine.jpg'],
+    imageAlt: '传统酒坛场景（通用产品示意）',
   },
   {
     id: 4,
@@ -56,12 +51,8 @@
     badge: '天然野生',
     desc: '采自蒋巷生态园荷塘的莲子，自然晾干制成。冲泡后清香怡人，富含传统养生功效，是健康养生的好选择。',
     features: ['荷塘采摘', '自然晾干', '养生茶饮', '无咖啡因'],
-    images: [
-      '/images/products/lotus-seed-tea.jpg',
-      '/images/products/packaging-lotus-tea.jpg'
-    ],
-    packagingDesign: '/images/products/packaging-lotus-tea.jpg',
-    packagingDesc: '极简推拉式纸盒，配荷塘水彩插画。粉绿色调体现夏日荷塘意境。'
+    images: ['/images/products/lotus-seed-tea.jpg'],
+    imageAlt: '花草茶冲泡场景（通用产品示意）',
   },
   {
     id: 5,
@@ -74,10 +65,13 @@
     features: ['果园种植', '树上成熟', '采摘体验', '时令品种'],
     images: [
       '/images/products/seasonal-fruits.jpg',
-      '/images/products/packaging-fruits.jpg'
+      '/media_new/product-showcase/seasonal-fruits-basket.webp'
     ],
-    packagingDesign: '/images/products/packaging-fruits.jpg',
-    packagingDesc: '可回收木条箱包装，配天然麻绳提手。按季节印有水彩水果插画，暖色丰收色调。'
+    imageAlt: '多种时令水果（通用产品示意）',
+    imageAlts: [
+      '多种时令水果（通用产品示意）',
+      '果篮中集中陈列的黄色时令水果'
+    ],
   },
   {
     id: 6,
@@ -88,20 +82,16 @@
     badge: '江苏名牌',
     desc: '建筑用钢结构件。常盛集团的旗舰产品——江苏省最大的钢结构生产基地。连续五年荣获上海市"金钢奖"，产品远销全国20多个省区市。',
     features: ['江苏省名牌', '五连冠金钢奖', '覆盖20+省份', '亿元级企业'],
-    images: [
-      '/images/products/steel-components.jpg',
-      '/images/products/packaging-steel.jpg'
-    ],
-    packagingDesign: '/images/products/packaging-steel.jpg',
-    packagingDesc: '工业级包装，配品牌钢带。"常盛"商标为江苏省著名商标。'
+    images: ['/images/products/steel-components.jpg'],
+    imageAlt: '钢结构建筑构件（通用产业示意）',
   }
 ]
 
 export const productCategories = [
-  { value: 'all', label: '全部产品' },
-  { value: 'grain', label: '粮油' },
-  { value: 'vegetable', label: '蔬菜' },
-  { value: 'fruit', label: '水果' },
-  { value: 'beverage', label: '饮品' },
-  { value: 'industrial', label: '工业产品' }
+  { value: 'all', label: '全部产品', description: '农业产品与工业制造共同构成村庄产业图景，既连接田间生产和日常消费，也体现乡村产业持续拓展的多元路径。' },
+  { value: 'grain', label: '粮油', description: '水稻生产依托江南水田条件与生态种植方式，从育秧、管护到收获，串联起农业基础、产品品质与乡村增收。' },
+  { value: 'vegetable', label: '蔬菜', description: '时令蔬菜强调新鲜采收与本地生产，田园种植、日常供应和采摘体验相互衔接，丰富了乡村农业的应用场景。' },
+  { value: 'fruit', label: '水果', description: '果园随季节提供不同收获，成熟果实既是农业生产成果，也为亲子采摘和乡村休闲带来更具参与感的体验。' },
+  { value: 'beverage', label: '饮品', description: '以稻米、莲子等农业意象延伸出的饮品策划，尝试把地方风物、传统制作与更便于传播的产品表达结合起来。' },
+  { value: 'industrial', label: '工业产品', description: '工业制造拓宽了乡村产业结构，与农业、服务业形成互补，也为就业、集体经济和村庄长期发展提供现实支撑。' }
 ]

@@ -14,7 +14,7 @@
           <h4 class="footer__subtitle">快速导航</h4>
           <ul class="footer__links">
             <li><router-link to="/">首页</router-link></li>
-            <li><router-link to="/video">宣传片</router-link></li>
+            <li><router-link to="/video">专题视频</router-link></li>
             <li><router-link to="/map">导览地图</router-link></li>
             <li><router-link to="/village">村庄介绍</router-link></li>
             <li><router-link to="/features">特色展示</router-link></li>

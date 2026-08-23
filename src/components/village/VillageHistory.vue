@@ -14,8 +14,8 @@
             <h3 class="village-history__title">{{ item.title }}</h3>
             <p class="village-history__desc">{{ item.desc }}</p>
           </div>
-          <div class="village-history__image">
-            <img :src="item.image" :alt="item.title" loading="lazy" />
+          <div v-if="item.image" class="village-history__image">
+            <img :src="item.image" :alt="item.imageAlt || item.title" loading="lazy" />
           </div>
         </div>
         <div class="village-history__dot"></div>

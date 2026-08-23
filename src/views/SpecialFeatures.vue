@@ -4,6 +4,9 @@
       <div class="container">
         <h1 class="section-title">特色展示</h1>
         <p class="section-subtitle">蒋巷特色农产品与四季美景摄影</p>
+        <p class="features-page__intro">
+          蒋巷村的特色，既写在水网、田园与四季草木之中，也体现在农业生产、乡村产业和村民的日常生活里。本页以产品与影像为线索，串联生态、劳动和公共文化空间，呈现江南村庄在传承中不断生长的当代面貌。
+        </p>
       </div>
     </section>
 
@@ -12,7 +15,7 @@
         <el-tabs v-model="activeTab" class="features-page__tabs">
           <el-tab-pane label="农产品展示" name="products">
             <h2 class="section-title">产品展示</h2>
-            <p class="section-subtitle">蒋巷特色农产品的包装视觉方案</p>
+            <p class="section-subtitle">蒋巷相关产品与原创包装策划</p>
             <ProductShowcase
               :products="store.allProducts"
               :categories="store.productCategoryList"
@@ -67,7 +70,25 @@ const filteredPhotos = computed(() => {
     padding: calc(64px + 3rem) 0 2rem;
 
     .section-title { color: #fff; }
-    .section-subtitle { color: rgba(255, 255, 255, 0.7); }
+    .section-subtitle {
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__intro {
+    max-width: 780px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.95rem;
+    line-height: 1.85;
+    text-align: center;
+
+    @media (max-width: 640px) {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      text-align: left;
+    }
   }
 
   &__tabs {

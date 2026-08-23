@@ -1,9 +1,7 @@
 ﻿<template>
   <div class="home">
     <section class="hero">
-      <video class="hero__bg" autoplay muted loop playsinline poster="/images/hero/hero-bg.jpg">
-        <source src="/videos/jiangxiang-social-practice.mp4" type="video/mp4" />
-      </video>
+      <img class="hero__bg" src="/images/hero/hero-bg.jpg" alt="" aria-hidden="true" />
       <div class="hero__overlay"></div>
       <div class="hero__content">
         <p class="hero__tagline">六朝松小纵队 · 社会实践项目</p>
@@ -14,7 +12,7 @@
         </p>
         <div class="hero__actions">
           <router-link to="/video" class="hero__btn hero__btn--primary">
-            <el-icon><VideoCamera /></el-icon> 观看宣传片
+            <el-icon><VideoCamera /></el-icon> 观看专题视频
           </router-link>
           <router-link to="/village" class="hero__btn hero__btn--outline">
             <el-icon><Reading /></el-icon> 走进蒋巷
@@ -86,10 +84,10 @@ import { useVillageStore } from '@/stores/village'
 const store = useVillageStore()
 
 const navCards = [
-  { path: '/video', title: '宣传片', desc: '观看社会实践纪录片和精选视频，获取小程序内嵌代码。', icon: 'VideoCamera' },
+  { path: '/video', title: '专题视频', desc: '通过可信媒体的官方页面了解蒋巷村与常德盛的故事。', icon: 'VideoCamera' },
   { path: '/map', title: '导览地图', desc: '在交互式地图上探索12个地标景点——从生态园到有机稻田。', icon: 'MapLocation' },
   { path: '/village', title: '村庄介绍', desc: '蒋巷村史时间线、近百项荣誉、领导视察和现代价值。', icon: 'OfficeBuilding' },
-  { path: '/features', title: '特色展示', desc: '蒋巷特色农产品包装视觉方案和四季美景摄影图。', icon: 'Star' }
+  { path: '/features', title: '特色展示', desc: '浏览已标注来源状态的农业产品示意与乡村影像。', icon: 'Star' }
 ]
 </script>
 

@@ -13,10 +13,11 @@ All core features are built and the project compiles successfully (`npm run buil
 - [x] Video section: `VideoPlayer.vue` (Video.js), `VideoGallery.vue` with mini-program embed code generator
 - [x] Map section: `TourMap.vue` (Leaflet, 12 landmarks, category filter, fly-to, popups)
 - [x] Village intro: `VillageHistory.vue` (timeline), `Honors.vue` (grid + tabs + modals), `ModernValue.vue` (stats + 5-stage path + value cards)
-- [x] Special features: `ProductShowcase.vue` (6 products, packaging drawer), `PhotoGallery.vue` (18 photos, masonry + lightbox)
+- [x] Special features: `ProductShowcase.vue` (6 products, truthful packaging-design placeholders), `PhotoGallery.vue` (9 retained photos, seasonal filters + lightbox)
 - [x] Data files: `history.js`, `honors.js`, `landmarks.js`, `products.js`, `photos.js`, `videos.js`
-- [x] All images localized in `public/images/` (SVG placeholders)
-- [x] Video renamed to ASCII filename (`jiangxiang-social-practice.mp4`)
+- [x] Media inventory audited; unrelated, duplicate, and misleading assets removed
+- [x] Broken local-video references removed; verified external video source retained
+- [x] Per-file provenance and copyright review recorded in `MEDIA_SOURCES.md`
 - [x] `resources/` added to `.gitignore`
 - [x] `README.md` and `README_ZH.md` written
 - [x] Full UI and content localization to Chinese
@@ -27,15 +28,15 @@ All core features are built and the project compiles successfully (`npm run buil
 
 ## Remaining TODOs
 
-### Replace Placeholder Images
-Most images in `public/images/` are SVG placeholders (green background, "Jiangxiang Village" text). Replace with real photos:
+### Media Provenance
 
-1. Add real `.jpg` files to `public/images/<category>/` keeping the same base filename
-2. Update the corresponding path in `src/data/*.js` (change `.svg` → `.jpg`)
-3. A backup copy of all placeholders is in `resources/images/` (gitignored)
+- [ ] Obtain explicit reuse permission for retained reporting images marked in `MEDIA_SOURCES.md`
+- [ ] Replace location-pending images with team-owned or formally authorized Jiangxiang Village photos
+- [ ] Replace generic product illustrations with team-owned product photography
+- [ ] Record the source URL, credit, permission status, and intended page for every new media file
 
 ### Content Enhancements
-- [ ] Add real Bilibili/video URLs for the 3 external videos in `src/data/videos.js`
+- [ ] Add more verified official video pages only when their source and availability have been checked
 - [ ] Replace landmark coordinates in `src/data/landmarks.js` with verified GPS data
 - [ ] Add actual product packaging design mockups
 - [ ] Collect real seasonal photography (spring/summer/autumn/winter)
