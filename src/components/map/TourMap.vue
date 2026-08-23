@@ -16,6 +16,12 @@
           :class="{ 'tour-map__category--active': activeCategory === cat.value }"
           @click="$emit('update:activeCategory', cat.value)"
         >
+          <span
+            v-if="cat.value !== 'all'"
+            class="tour-map__category-shape"
+            :style="{ backgroundColor: cat.color, clipPath: cat.shapePath }"
+            aria-hidden="true"
+          ></span>
           {{ cat.label }}
         </button>
       </div>
@@ -28,10 +34,23 @@
           :class="{ 'tour-map__item--active': selectedLandmark?.id === landmark.id }"
           @click="$emit('select-landmark', landmark)"
         >
-          <img :src="landmark.image" :alt="landmark.name" loading="lazy" />
+          <img v-if="landmark.image" :src="landmark.image" :alt="landmark.imageAlt || landmark.name" loading="lazy" />
+          <div v-else class="tour-map__item-placeholder" aria-hidden="true">
+            <el-icon :size="24"><Picture /></el-icon>
+          </div>
           <div class="tour-map__item-info">
             <h4>{{ landmark.name }}</h4>
-            <span class="tour-map__tag">{{ landmark.category }}</span>
+            <span class="tour-map__tag">
+              <span
+                class="tour-map__tag-shape"
+                :style="{
+                  backgroundColor: categoryMeta(landmark.category).color,
+                  clipPath: categoryMeta(landmark.category).shapePath
+                }"
+                aria-hidden="true"
+              ></span>
+              {{ categoryMeta(landmark.category).label }}
+            </span>
           </div>
         </div>
       </div>
@@ -53,30 +72,36 @@ const props = defineProps({
   selectedLandmark: { type: Object, default: null }
 })
 
-const emit = defineEmits(['select-landmark'])
+const emit = defineEmits(['select-landmark', 'update:activeCategory'])
 
 const mapRef = ref(null)
 let map = null
 let markersLayer = null
 
+const categoryMeta = (category) => props.categories.find(item => item.value === category) || {
+  label: category,
+  color: '#1f6d3d',
+  shape: 'circle',
+  shapePath: 'circle(48% at 50% 50%)'
+}
+
 const createIcon = (category) => {
-  const colors = {
-    nature: '#2d8a4f',
-    culture: '#d4a017',
-    agriculture: '#8b5e3c',
-    residential: '#3b82f6',
-    industry: '#6b7280',
-    entertainment: '#ec4899',
-    accommodation: '#a855f7',
-    welfare: '#f59e0b'
-  }
-  const color = colors[category] || '#1f6d3d'
+  const { color, shapePath, label } = categoryMeta(category)
   return L.divIcon({
-    className: 'custom-marker',
-    html: `<div style="background:${color};width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;"><span style="transform:rotate(45deg);color:#fff;font-size:12px;">📍</span></div>`,
-    iconSize: [28, 28],
-    iconAnchor: [14, 28],
-    popupAnchor: [0, -28]
+    className: 'tour-map-marker',
+    html: `
+      <div
+        class="tour-map-marker__shape"
+        role="img"
+        aria-label="${label}地标"
+        style="clip-path:${shapePath};"
+      >
+        <span style="background:${color};clip-path:${shapePath};"></span>
+      </div>
+    `,
+    iconSize: [34, 34],
+    iconAnchor: [17, 17],
+    popupAnchor: [0, -20]
   })
 }
 
@@ -108,9 +133,13 @@ const addMarkers = () => {
       title: landmark.name
     })
 
+    const popupImage = landmark.image
+      ? `<img src="${landmark.image}" alt="${landmark.imageAlt || landmark.name}" style="width:100%;height:120px;object-fit:cover;border-radius:8px;margin-bottom:8px;" />`
+      : ''
+
     const popupContent = `
       <div style="width:240px;">
-        <img src="${landmark.image}" alt="${landmark.name}" style="width:100%;height:120px;object-fit:cover;border-radius:8px;margin-bottom:8px;" />
+        ${popupImage}
         <h4 style="margin:0 0 4px;color:#1f6d3d;">${landmark.name}</h4>
         <p style="margin:0 0 8px;font-size:0.8rem;color:#4b5563;line-height:1.4;">${landmark.desc.substring(0, 100)}...</p>
         <p style="margin:0;font-size:0.75rem;color:#9ca3af;">${landmark.visiting}</p>
@@ -177,16 +206,18 @@ watch(() => props.selectedLandmark, (newVal) => {
   }
 
   &__container {
-    border-radius: 12px;
+    border: 1px solid rgba(31, 109, 61, 0.12);
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 30px rgba(31, 65, 43, 0.12);
     z-index: 1;
   }
 
   &__sidebar {
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(31, 109, 61, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(31, 65, 43, 0.09);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -221,6 +252,9 @@ watch(() => props.selectedLandmark, (newVal) => {
   }
 
   &__category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
     padding: 4px 10px;
     border: 1px solid #e5e7eb;
     background: #f9fafb;
@@ -242,6 +276,13 @@ watch(() => props.selectedLandmark, (newVal) => {
     }
   }
 
+  &__category-shape {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 10px;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+  }
+
   &__list {
     overflow-y: auto;
     flex: 1;
@@ -252,21 +293,36 @@ watch(() => props.selectedLandmark, (newVal) => {
     display: flex;
     gap: 0.75rem;
     padding: 0.6rem;
+    border: 1px solid transparent;
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
 
     &:hover, &--active {
       background: #f0f9f4;
+      border-color: #d7eadc;
+      transform: translateX(2px);
     }
 
-    img {
+    img,
+    .tour-map__item-placeholder {
       width: 64px;
       height: 64px;
-      object-fit: cover;
       border-radius: 8px;
       flex-shrink: 0;
     }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__item-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    background: #f3f4f6;
   }
 
   &__item-info {
@@ -284,13 +340,45 @@ watch(() => props.selectedLandmark, (newVal) => {
   }
 
   &__tag {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
     font-size: 0.65rem;
     text-transform: uppercase;
     color: #1f6d3d;
     background: #dcf2e3;
     padding: 1px 6px;
     border-radius: 8px;
+  }
+
+  &__tag-shape {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+  }
+
+  :global(.tour-map-marker) {
+    border: 0;
+    background: transparent;
+  }
+
+  :global(.tour-map-marker__shape) {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    background: #fff;
+    filter: drop-shadow(0 3px 4px rgba(20, 45, 29, 0.35));
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+
+  :global(.tour-map-marker__shape > span) {
+    position: absolute;
+    inset: 3px;
+  }
+
+  :global(.tour-map-marker:hover .tour-map-marker__shape) {
+    transform: translateY(-2px) scale(1.08);
+    filter: drop-shadow(0 5px 6px rgba(20, 45, 29, 0.4));
   }
 }
 </style>

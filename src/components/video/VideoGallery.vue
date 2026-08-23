@@ -19,12 +19,12 @@
           @click="$emit('select', video)"
         >
           <div class="video-gallery__thumb">
-            <img :src="video.poster" :alt="video.title" loading="lazy" />
+            <img :src="video.poster" :alt="video.posterAlt || video.title" loading="lazy" />
             <div class="video-gallery__thumb-overlay">
               <el-icon :size="32"><VideoPlay /></el-icon>
             </div>
             <span class="video-gallery__badge" v-if="video.isLocal">本地</span>
-            <span class="video-gallery__badge video-gallery__badge--external" v-else>外部</span>
+            <span class="video-gallery__badge video-gallery__badge--external" v-else>{{ video.sourceLabel || '外部' }}</span>
           </div>
           <div class="video-gallery__card-info">
             <h5>{{ video.title }}</h5>
@@ -38,7 +38,6 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
 import { VideoPlay } from '@element-plus/icons-vue'
 import VideoPlayer from './VideoPlayer.vue'
 

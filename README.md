@@ -10,9 +10,9 @@ A responsive web application showcasing Jiangxiang Village (蒋巷村) — a mod
 
 ## Features
 
-- **Promotional Video** — Curated video gallery with a custom Video.js player and embed code generator for WeChat mini-programs
+- **Featured Video** — Verified official-media programme links, with source labels and poster attribution
 - **Tour Map** — Interactive Leaflet map with 12 landmarks, category filtering, and popup cards
-- **Village Introduction** — Scrollable history timeline (1966–2022), honors grid (16 village + 7 leader awards), leadership visits, and modern value infographics
+- **Village Introduction** — Scrollable history timeline (1966–2024), honors grid (17 village + 7 leader awards), leadership visits, and modern value infographics
 - **Special Features** — Agricultural product showcase with packaging design concepts and a seasonal masonry photo gallery (spring/summer/autumn/winter × scenery/life/labor)
 
 ## Tech Stack
@@ -95,7 +95,7 @@ npm run preview
 
 ### Video
 
-The promotional video is stored at `public/videos/jiangxiang-social-practice.mp4` (174 MB). It is referenced in the hero section and the video gallery.
+The repository does not contain a local promotional video. The video page links to a verified CCTV program page and does not download or re-host the copyrighted program.
 
 ### Images
 
@@ -107,19 +107,12 @@ public/images/
 ├── history/       # Timeline images
 ├── landmarks/     # Map landmark images
 ├── photos/        # Photo gallery
-├── posters/       # Video poster frames
-└── products/      # Product & packaging images
+└── products/      # Product images; packaging artwork remains an original-design placeholder
 ```
 
-Most images are currently SVG placeholders (green with "Jiangxiang Village" text). To replace with real photos:
+The media inventory was audited in August 2026. Clearly unrelated images, misleading packaging images, duplicate physical files, and broken video references were removed. Retained images are classified as verified Jiangxiang-related reporting images, location-pending images, or generic illustrative assets.
 
-1. Add your photos to `public/images/<category>/` with the same base filename but `.jpg` extension
-2. Update the corresponding path in `src/data/*.js` (change `.svg` to `.jpg`)
-3. A backup copy of all assets is in `resources/images/` (gitignored)
-
-### Re-downloading Placeholder Images
-
-The `download-images.ps1` script can be modified and re-run to download real images from any URL source.
+See [MEDIA_SOURCES.md](MEDIA_SOURCES.md) for per-file provenance, copyright status, and items requiring human review. No online image should be added to the repository without recording its source and reuse status there.
 
 ## Content Sources
 

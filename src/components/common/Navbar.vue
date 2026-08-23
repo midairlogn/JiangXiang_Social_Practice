@@ -32,7 +32,7 @@ const mobileMenuOpen = ref(false)
 
 const navItems = [
   { label: '首页', path: '/', icon: 'HomeFilled' },
-  { label: '宣传片', path: '/video', icon: 'VideoCamera' },
+  { label: '专题视频', path: '/video', icon: 'VideoCamera' },
   { label: '导览地图', path: '/map', icon: 'MapLocation' },
   { label: '村庄介绍', path: '/village', icon: 'OfficeBuilding' },
   { label: '特色展示', path: '/features', icon: 'Star' }
@@ -154,6 +154,7 @@ onUnmounted(() => {
     }
 
     @media (max-width: 768px) {
+      width: 100%;
       width: 100%;
       padding: 0.75rem 1rem;
       color: #4b5563 !important;

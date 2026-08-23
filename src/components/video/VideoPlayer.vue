@@ -1,6 +1,7 @@
 <template>
-  <div class="video-player" ref="containerRef">
+  <div class="video-player">
     <video
+      v-if="video.isLocal && video.src"
       ref="videoRef"
       class="video-js vjs-default-skin vjs-big-play-centered"
       :poster="video.poster"
@@ -8,12 +9,27 @@
       preload="auto"
       :data-setup="JSON.stringify({ fluid: true, playbackRates: [0.5, 1, 1.5, 2] })"
     >
-      <source v-if="video.src" :src="video.src" type="video/mp4" />
-      <source v-if="video.externalUrl" :src="video.externalUrl" type="video/mp4" />
+      <source :src="video.src" type="video/mp4" />
       <p class="vjs-no-js">请启用 JavaScript 并使用支持 HTML5 视频的浏览器。</p>
     </video>
 
-    <div v-if="!video.src && !video.externalUrl" class="video-player__placeholder">
+    <a
+      v-else-if="video.externalUrl"
+      class="video-player__external"
+      :href="video.externalUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      :aria-label="`${video.externalAction || '前往官方页面观看'}：${video.title}`"
+    >
+      <img :src="video.poster" :alt="video.posterAlt || video.title" />
+      <span class="video-player__external-overlay">
+        <el-icon :size="52"><VideoPlay /></el-icon>
+        <strong>{{ video.externalAction || '前往官方页面观看' }}</strong>
+        <small>{{ video.sourceLabel }}</small>
+      </span>
+    </a>
+
+    <div v-else class="video-player__placeholder">
       <el-icon :size="48"><VideoCamera /></el-icon>
       <p>视频即将上线</p>
       <p class="video-player__placeholder-desc">{{ video.desc }}</p>
@@ -23,6 +39,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
+import { VideoPlay } from '@element-plus/icons-vue'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 
@@ -34,11 +51,10 @@ const props = defineProps({
 })
 
 const videoRef = ref(null)
-const containerRef = ref(null)
 let player = null
 
 const initPlayer = () => {
-  if (videoRef.value && (props.video.src || props.video.externalUrl)) {
+  if (videoRef.value && props.video.isLocal && props.video.src) {
     if (player) {
       player.dispose()
     }
@@ -106,6 +122,44 @@ watch(() => props.video, () => {
 
     p {
       font-size: 1.1rem;
+    }
+  }
+
+  &__external {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #fff;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      background: rgba(15, 58, 33, 0.58);
+      transition: background 0.2s;
+
+      strong {
+        font-size: 1.05rem;
+      }
+
+      small {
+        color: rgba(255, 255, 255, 0.75);
+      }
+    }
+
+    &:hover &-overlay {
+      background: rgba(15, 58, 33, 0.72);
     }
   }
 

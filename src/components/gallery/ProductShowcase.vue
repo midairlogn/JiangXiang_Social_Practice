@@ -12,6 +12,10 @@
       </button>
     </div>
 
+    <p v-if="activeCategory?.description" class="product-showcase__category-description">
+      {{ activeCategory.description }}
+    </p>
+
     <div class="product-showcase__grid">
       <div
         v-for="product in filtered"
@@ -20,7 +24,7 @@
         @click="handleSelect(product)"
       >
         <div class="product-showcase__image">
-          <img :src="product.images[0]" :alt="product.name" loading="lazy" />
+          <img :src="product.images[0]" :alt="product.imageAlts?.[0] || product.imageAlt || product.name" loading="lazy" />
           <span class="product-showcase__badge">{{ product.badge }}</span>
         </div>
         <div class="product-showcase__body">
@@ -37,11 +41,11 @@
       </div>
     </div>
 
-    <el-drawer v-model="drawerVisible" :title="selectedProduct?.name" size="55%">
+    <el-drawer v-model="drawerVisible" :title="selectedProduct?.name" size="min(560px, 92vw)">
       <div v-if="selectedProduct" class="product-showcase__detail">
         <el-carousel :interval="4000" height="300px" class="product-showcase__carousel">
-          <el-carousel-item v-for="img in selectedProduct.images" :key="img">
-            <img :src="img" :alt="selectedProduct.name" class="product-showcase__carousel-img" />
+          <el-carousel-item v-for="(img, index) in selectedProduct.images" :key="img">
+            <img :src="img" :alt="selectedProduct.imageAlts?.[index] || selectedProduct.imageAlt || selectedProduct.name" class="product-showcase__carousel-img" />
           </el-carousel-item>
         </el-carousel>
 
@@ -54,6 +58,7 @@
           <span class="product-showcase__badge product-showcase__badge--lg">{{ selectedProduct.badge }}</span>
 
           <p class="product-showcase__detail-desc">{{ selectedProduct.desc }}</p>
+          <p class="product-showcase__media-note">{{ selectedProduct.mediaNote }}</p>
 
           <h4>产品特点</h4>
           <div class="product-showcase__detail-features">
@@ -63,10 +68,16 @@
           </div>
 
           <div class="product-showcase__packaging">
-            <h4>包装设计方案</h4>
-            <img :src="selectedProduct.packagingDesign" :alt="selectedProduct.name + ' 包装设计'" loading="lazy" />
-            <p>{{ selectedProduct.packagingDesc }}</p>
+            <h4>包装视觉方案</h4>
+            <div class="product-showcase__packaging-placeholder">
+              <span aria-hidden="true">🎨</span>
+              <div>
+                <strong>原创包装视觉待补充</strong>
+                <p>{{ selectedProduct.packagingPlan }}</p>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </el-drawer>
@@ -74,10 +85,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { Check } from '@element-plus/icons-vue'
 
-defineProps({
+const props = defineProps({
   products: { type: Array, required: true },
   categories: { type: Array, required: true },
   active: { type: String, default: 'all' },
@@ -88,6 +99,7 @@ const emit = defineEmits(['update:active', 'select'])
 
 const drawerVisible = ref(false)
 const selectedProduct = ref(null)
+const activeCategory = computed(() => props.categories.find(category => category.value === props.active))
 
 const handleSelect = (product) => {
   selectedProduct.value = product
@@ -104,6 +116,18 @@ const handleSelect = (product) => {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 2rem;
+  }
+
+  &__category-description {
+    max-width: 760px;
+    margin: -0.75rem auto 2rem;
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid #88cf9f;
+    border-radius: 0 10px 10px 0;
+    background: #f3fbf5;
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.75;
   }
 
   &__category {
@@ -260,6 +284,17 @@ const handleSelect = (product) => {
     margin: 1rem 0;
   }
 
+  &__media-note {
+    color: #92400e;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
   &__detail-features {
     display: flex;
     flex-wrap: wrap;
@@ -268,27 +303,38 @@ const handleSelect = (product) => {
   }
 
   &__packaging {
-    background: #f9fafb;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-top: 1rem;
-
     h4 {
       color: #1f6d3d;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__packaging-placeholder {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+    padding: 1rem;
+    border: 1px dashed #88cf9f;
+    border-radius: 10px;
+    background: #f3fbf5;
+    color: #374151;
+
+    > span {
+      font-size: 1.6rem;
+      line-height: 1;
     }
 
-    img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+    strong {
+      color: #1f6d3d;
     }
 
     p {
+      margin-top: 0.35rem;
       color: #6b7280;
       font-size: 0.85rem;
       line-height: 1.6;
     }
   }
+
 }
 </style>

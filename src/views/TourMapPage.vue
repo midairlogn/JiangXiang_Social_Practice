@@ -7,7 +7,7 @@
       </div>
     </section>
 
-    <section class="map-page__content" style="padding: 2rem 0;">
+    <section class="map-page__content">
       <div class="container">
         <TourMap
           :landmarks="store.allLandmarks"
@@ -20,13 +20,23 @@
       </div>
     </section>
 
-    <section class="map-page__legend" style="padding: 2rem 0 4rem;">
+    <section class="map-page__legend">
       <div class="container">
-        <h3 class="section-title" style="font-size: 1.5rem;">地标图例</h3>
-        <div class="map-page__legend-grid">
-          <div v-for="cat in categoryColors" :key="cat.value" class="map-page__legend-item">
-            <span class="map-page__legend-dot" :style="{ background: cat.color }"></span>
-            {{ cat.label }}
+        <div class="map-page__legend-card">
+          <div class="map-page__legend-heading">
+            <div>
+              <span>地图识别</span>
+              <h3>地标图例</h3>
+            </div>
+            <p>颜色、形状与文字共同区分类别，图例与地图标记完全对应。</p>
+          </div>
+          <div class="map-page__legend-grid">
+            <div v-for="cat in legendCategories" :key="cat.value" class="map-page__legend-item">
+              <span class="map-page__legend-symbol" :style="{ clipPath: cat.shapePath }" aria-hidden="true">
+                <span :style="{ backgroundColor: cat.color, clipPath: cat.shapePath }"></span>
+              </span>
+              <span>{{ cat.label }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -48,16 +58,7 @@ const filteredLandmarks = computed(() => {
   return store.allLandmarks.filter(l => l.category === activeCategory.value)
 })
 
-const categoryColors = [
-  { value: 'nature', label: '自然生态', color: '#2d8a4f' },
-  { value: 'culture', label: '文化历史', color: '#d4a017' },
-  { value: 'agriculture', label: '农业观光', color: '#8b5e3c' },
-  { value: 'residential', label: '居住社区', color: '#3b82f6' },
-  { value: 'industry', label: '工业园区', color: '#6b7280' },
-  { value: 'entertainment', label: '休闲娱乐', color: '#ec4899' },
-  { value: 'accommodation', label: '住宿度假', color: '#a855f7' },
-  { value: 'welfare', label: '民生福利', color: '#f59e0b' }
-]
+const legendCategories = computed(() => store.landmarkCategoryList.filter(category => category.value !== 'all'))
 </script>
 
 <style scoped lang="scss">
@@ -71,28 +72,124 @@ const categoryColors = [
     .section-subtitle { color: rgba(255, 255, 255, 0.7); }
   }
 
+  &__content {
+    padding: 2.5rem 0;
+    background:
+      radial-gradient(circle at 8% 10%, rgba(136, 207, 159, 0.13), transparent 26%),
+      #f8fbf9;
+  }
+
+  &__legend {
+    padding: 0 0 4rem;
+    background: #f8fbf9;
+  }
+
+  &__legend-card {
+    padding: 1.5rem;
+    border: 1px solid rgba(31, 109, 61, 0.12);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 10px 28px rgba(31, 65, 43, 0.08);
+  }
+
+  &__legend-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+
+    span {
+      color: #2d8a4f;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+
+    h3 {
+      margin-top: 0.2rem;
+      color: #1f6d3d;
+      font-size: 1.35rem;
+    }
+
+    p {
+      max-width: 440px;
+      color: #6b7280;
+      font-size: 0.85rem;
+      line-height: 1.65;
+      text-align: right;
+    }
+
+    @media (max-width: 640px) {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+
   &__legend-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
     margin-top: 1.5rem;
   }
 
   &__legend-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.65rem;
+    min-height: 48px;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid #e5eee8;
+    border-radius: 10px;
+    background: #fbfdfb;
     font-size: 0.85rem;
     color: #4b5563;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+
+    &:hover {
+      border-color: #b7d8c2;
+      background: #f3faf5;
+      transform: translateY(-1px);
+    }
   }
 
-  &__legend-dot {
-    width: 16px;
-    height: 16px;
-    border-radius: 50% 50% 50% 0;
-    transform: rotate(-45deg);
-    border: 2px solid #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  &__legend-symbol {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    background: #fff;
+    filter: drop-shadow(0 2px 2px rgba(20, 45, 29, 0.22));
+
+    > span {
+      position: absolute;
+      inset: 3px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: 1.5rem 0;
+    }
+
+    &__legend-card {
+      padding: 1rem;
+    }
+
+    &__legend-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+    }
+
+    &__legend-item {
+      min-height: 44px;
+      padding: 0.55rem 0.6rem;
+      font-size: 0.78rem;
+    }
   }
 }
 </style>
