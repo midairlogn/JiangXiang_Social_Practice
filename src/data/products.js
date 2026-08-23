@@ -24,7 +24,7 @@
     features: ['有机堆肥', '每日采摘', '可采摘体验', '循环经济产品'],
     images: [
       '/images/products/green-vegetables.jpg',
-      '/media_new/农产品展示/OIP-C.webp'
+      '/media_new/product-showcase/cherry-tomatoes-vine.webp'
     ],
     imageAlt: '南方市场常见绿色蔬菜（通用产品示意）',
     imageAlts: [
@@ -73,7 +73,7 @@
     features: ['果园种植', '树上成熟', '采摘体验', '时令品种'],
     images: [
       '/images/products/seasonal-fruits.jpg',
-      '/media_new/农产品展示/OIP-C (2).webp'
+      '/media_new/product-showcase/seasonal-fruits-basket.webp'
     ],
     imageAlt: '多种时令水果（通用产品示意）',
     imageAlts: [
