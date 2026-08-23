@@ -47,12 +47,6 @@
       </button>
     </div>
 
-    <div v-else class="photo-gallery__empty" role="status">
-      <span class="photo-gallery__empty-icon">❄️</span>
-      <h4>暂无可核验的该主题图片</h4>
-      <p>为避免用异地素材冒充蒋巷村实景，此处等待团队补充自摄或已获授权的真实素材。</p>
-    </div>
-
     <el-dialog v-model="lightboxVisible" :show-close="true" width="80%" class="photo-gallery__lightbox">
       <div v-if="selectedPhoto" class="photo-gallery__lightbox-content">
         <img :src="selectedPhoto.src" :alt="selectedPhoto.alt || selectedPhoto.title" />
@@ -181,36 +175,6 @@ const openLightbox = (photo) => {
     @media (max-width: 480px) {
       column-count: 1;
     }
-  }
-
-  &__empty {
-    min-height: 260px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    border: 1px dashed #b7d8c2;
-    border-radius: 12px;
-    background: #f8fcf9;
-    text-align: center;
-
-    h4 {
-      color: #1f6d3d;
-      font-size: 1rem;
-    }
-
-    p {
-      max-width: 560px;
-      color: #6b7280;
-      font-size: 0.85rem;
-      line-height: 1.6;
-    }
-  }
-
-  &__empty-icon {
-    font-size: 2rem;
   }
 
   &__actions {

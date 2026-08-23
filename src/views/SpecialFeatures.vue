@@ -16,9 +16,6 @@
           <el-tab-pane label="农产品展示" name="products">
             <h2 class="section-title">产品展示</h2>
             <p class="section-subtitle">蒋巷相关产品与原创包装策划</p>
-            <p class="features-page__media-notice">
-              产品图片为通用南方农业或产业示意素材，不代表蒋巷村产品实拍；包装区为原创设计预留，不代表已有实物包装。具体来源与版权状态见 MEDIA_SOURCES.md。
-            </p>
             <ProductShowcase
               :products="store.allProducts"
               :categories="store.productCategoryList"
@@ -30,9 +27,6 @@
           <el-tab-pane label="美景摄影" name="photos">
             <h2 class="section-title">四季美景摄影</h2>
             <p class="section-subtitle">按四季与主题分类，呈现生活、景致与劳动之美</p>
-            <p class="features-page__media-notice">
-              已核验的蒋巷村报道图、地点待核验图片和通用示意素材均已在图片详情中明确标注。
-            </p>
             <PhotoGallery
               :photos="store.allPhotos"
               :themes="store.photoThemeList"
@@ -151,19 +145,6 @@ const filteredPhotos = computed(() => {
         box-shadow: 0 4px 12px rgba(31, 109, 61, 0.25);
       }
     }
-  }
-
-  &__media-notice {
-    max-width: 820px;
-    margin: -1.5rem auto 2rem;
-    padding: 0.75rem 1rem;
-    border: 1px solid #fde68a;
-    border-radius: 10px;
-    background: #fffbeb;
-    color: #92400e;
-    font-size: 0.82rem;
-    line-height: 1.6;
-    text-align: center;
   }
 }
 </style>
