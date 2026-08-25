@@ -1,7 +1,35 @@
 <template>
   <div class="video-player">
+    <button
+      v-if="video.embedUrl && !showEmbed"
+      type="button"
+      class="video-player__embed-cover"
+      :aria-label="`播放${video.title}`"
+      @click="showEmbed = true"
+    >
+      <img :src="video.poster" :alt="video.posterAlt || `${video.title}视频封面`" />
+      <span class="video-player__embed-cover-overlay">
+        <span class="video-player__embed-play" aria-hidden="true">
+          <el-icon :size="34"><VideoPlay /></el-icon>
+        </span>
+        <span class="video-player__embed-label">点击播放</span>
+      </span>
+    </button>
+
+    <iframe
+      v-else-if="video.embedUrl"
+      class="video-player__iframe"
+      :src="video.embedUrl"
+      :title="`${video.title}｜哔哩哔哩播放器`"
+      frameborder="0"
+      scrolling="no"
+      loading="lazy"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
     <video
-      v-if="video.isLocal && video.src"
+      v-else-if="video.isLocal && video.src"
       ref="videoRef"
       class="video-js vjs-default-skin vjs-big-play-centered"
       :poster="video.poster"
@@ -51,6 +79,7 @@ const props = defineProps({
 })
 
 const videoRef = ref(null)
+const showEmbed = ref(false)
 let player = null
 
 const initPlayer = () => {
@@ -86,6 +115,7 @@ onBeforeUnmount(() => {
 })
 
 watch(() => props.video, () => {
+  showEmbed.value = false
   if (player) {
     player.dispose()
     player = null
@@ -102,6 +132,73 @@ watch(() => props.video, () => {
   overflow: hidden;
   position: relative;
   aspect-ratio: 16 / 9;
+
+  &__embed-cover {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    cursor: pointer;
+    background: #0f3a21;
+    color: #fff;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      background: rgba(15, 58, 33, 0.08);
+    }
+
+    &:hover .video-player__embed-play {
+      transform: scale(1.06);
+    }
+
+    &:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: -5px;
+    }
+  }
+
+  &__embed-play {
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3px;
+    background: rgba(15, 58, 33, 0.76);
+    box-shadow: 0 4px 14px rgba(15, 58, 33, 0.2);
+    transition: transform 0.2s ease;
+  }
+
+  &__embed-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+  }
+
+  &__iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 
   :deep(.video-js) {
     width: 100%;

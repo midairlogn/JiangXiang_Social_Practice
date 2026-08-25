@@ -2,8 +2,8 @@
   <div class="video-page">
     <section class="video-page__header">
       <div class="container">
-        <h1 class="section-title">宣传片</h1>
-        <p class="section-subtitle">精选视频，多维度展示蒋巷村风采</p>
+        <h1 class="section-title">专题视频</h1>
+        <p class="section-subtitle">仅收录来源可核验的官方媒体视频页面</p>
       </div>
     </section>
 
@@ -50,7 +50,11 @@ const filteredVideos = computed(() => {
 <style scoped lang="scss">
 .video-page {
   &__header {
-    background: linear-gradient(135deg, #1f6d3d, #16482b);
+    background-color: #16482b;
+    background-image: var(--bg-dark-green-ink);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff;
     padding: calc(64px + 3rem) 0 2rem;
 
@@ -61,6 +65,14 @@ const filteredVideos = computed(() => {
     .section-subtitle {
       color: rgba(255, 255, 255, 0.7);
     }
+  }
+
+  &__content {
+    background-color: #f9fafb;
+    background-image: var(--bg-paper-ink);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__categories {

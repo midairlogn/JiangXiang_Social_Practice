@@ -64,6 +64,8 @@
     name: '蒋巷书院',
     category: 'accommodation',
     coordinates: [31.5710, 121.0520],
+    image: '/media_new/location/Book.webp',
+    imageAlt: '蒋巷书院室内阅读空间',
     desc: '常熟市首家中高端民宿度假酒店。28间现代简约又不失野趣的精致客房，坐落在宁静的乡村环境中。由专业设计和管理团队运营。',
     visiting: '住宿需提前预订'
   },
@@ -72,6 +74,8 @@
     name: '农民蔬菜园',
     category: 'agriculture',
     coordinates: [31.5665, 121.0510],
+    image: '/media_new/location/humangarden.webp',
+    imageAlt: '农民蔬菜园种植的番茄',
     desc: '村民种植新鲜有机蔬菜的集体菜园。利用村庄循环经济系统的有机堆肥，无农药种植。游客可体验农耕活动和采摘时令蔬菜。',
     visiting: '季节性采摘体验'
   },
@@ -90,6 +94,8 @@
     name: '嘎嘎部落',
     category: 'entertainment',
     coordinates: [31.5705, 121.0540],
+    image: '/media_new/location/gagabuluo.webp',
+    imageAlt: '嘎嘎部落亲子户外游乐项目',
     desc: '生态园内的亲子主题乐园。设有游戏、教育活动和户外探险项目。是"党建+旅游"发展新模式的创新探索。',
     visiting: '需购票入园'
   },
@@ -98,6 +104,8 @@
     name: '荷塘长廊',
     category: 'nature',
     coordinates: [31.5695, 121.0505],
+    image: '/media_new/location/hetangzoulang.jpg',
+    imageAlt: '荷塘长廊木质廊道与周边绿植',
     desc: '风景秀丽的荷塘，蜿蜒的长廊穿行其间。夏日里荷花盛开，水面铺满碧绿，景色令人心旷神怡，是摄影和休闲的绝佳去处。',
     visiting: '免费开放，夏季最佳观赏期'
   },
@@ -106,6 +114,8 @@
     name: '护理院与老年公寓',
     category: 'welfare',
     coordinates: [31.5675, 121.0480],
+    image: '/media_new/location/elderly.webp',
+    imageAlt: '蒋巷村老年公寓入口',
     desc: '158套老年公寓免费供老人居住，另有250个床位的护理院，提供医养结合服务。老人每月可领600至2300元养老金。被评为全国老年友好型社区。',
     visiting: '社会福利设施'
   }

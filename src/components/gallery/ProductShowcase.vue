@@ -58,12 +58,24 @@
           <span class="product-showcase__badge product-showcase__badge--lg">{{ selectedProduct.badge }}</span>
 
           <p class="product-showcase__detail-desc">{{ selectedProduct.desc }}</p>
+          <p class="product-showcase__media-note">{{ selectedProduct.mediaNote }}</p>
 
           <h4>产品特点</h4>
           <div class="product-showcase__detail-features">
             <span v-for="feature in selectedProduct.features" :key="feature" class="product-showcase__feature product-showcase__feature--lg">
               <el-icon><Check /></el-icon> {{ feature }}
             </span>
+          </div>
+
+          <div class="product-showcase__packaging">
+            <h4>包装视觉方案</h4>
+            <div class="product-showcase__packaging-placeholder">
+              <span aria-hidden="true">🎨</span>
+              <div>
+                <strong>原创包装视觉待补充</strong>
+                <p>{{ selectedProduct.packagingPlan }}</p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -272,11 +284,56 @@ const handleSelect = (product) => {
     margin: 1rem 0;
   }
 
+  &__media-note {
+    color: #92400e;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
   &__detail-features {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+  }
+
+  &__packaging {
+    h4 {
+      color: #1f6d3d;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__packaging-placeholder {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+    padding: 1rem;
+    border: 1px dashed #88cf9f;
+    border-radius: 10px;
+    background: #f3fbf5;
+    color: #374151;
+
+    > span {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    strong {
+      color: #1f6d3d;
+    }
+
+    p {
+      margin-top: 0.35rem;
+      color: #6b7280;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
   }
 
 }

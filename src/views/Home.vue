@@ -1,7 +1,6 @@
 ﻿<template>
   <div class="home">
     <section class="hero">
-      <img class="hero__bg" src="/images/hero/hero-bg.jpg" alt="" aria-hidden="true" />
       <div class="hero__overlay"></div>
       <div class="hero__content">
         <p class="hero__tagline">六朝松小纵队 · 社会实践项目</p>
@@ -39,7 +38,7 @@
       </div>
     </section>
 
-    <section class="path section-padding" style="background: #f0f9f4;">
+    <section class="path section-padding">
       <div class="container">
         <h2 class="section-title">发展路径</h2>
         <p class="section-subtitle">五阶段蜕变——从贫困走向富裕</p>
@@ -69,7 +68,7 @@
       </div>
     </section>
 
-    <section class="motto section-padding" style="background: linear-gradient(135deg, #1f6d3d, #16482b);">
+    <section class="motto section-padding">
       <div class="container motto__container">
         <p class="motto__text">"{{ store.overview.motto }}"</p>
         <p class="motto__author">— 蒋巷村党委第一书记 常德盛</p>
@@ -103,20 +102,16 @@ const navCards = [
   box-sizing: border-box;
   padding-top: 80px;
   padding-bottom: 130px;
-
-  &__bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-  }
+  background-color: #d6dfd5;
+  background-image: var(--bg-home-ink);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(15, 58, 33, 0.7), rgba(22, 72, 43, 0.5));
+    background: rgba(15, 58, 33, 0.44);
     z-index: 1;
   }
 
@@ -230,6 +225,12 @@ const navCards = [
 }
 
 .overview {
+  background-color: #f9fafb;
+  background-image: var(--bg-paper-ink);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -275,6 +276,18 @@ const navCards = [
 }
 
 .path {
+  background-color: #f0f9f4;
+  background-image: var(--bg-green-ink);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .section-title,
+  .section-subtitle {
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(15, 58, 33, 0.55);
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -338,6 +351,12 @@ const navCards = [
 }
 
 .nav-cards {
+  background-color: #f9fafb;
+  background-image: var(--bg-paper-ink);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -408,6 +427,12 @@ const navCards = [
 }
 
 .motto {
+  background-color: #16482b;
+  background-image: var(--bg-dark-green-ink);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   &__container {
     text-align: center;
     color: #fff;

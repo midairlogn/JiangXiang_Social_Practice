@@ -77,6 +77,126 @@ const emit = defineEmits(['select-landmark', 'update:activeCategory'])
 const mapRef = ref(null)
 let map = null
 let markersLayer = null
+let guideAreaLayer = null
+let guideAreaLabel = null
+
+const MAP_MIN_ZOOM = 14
+const MAP_MAX_ZOOM = 19
+const MAX_BOUNDS_PADDING_RATIO = 3
+const GUIDE_AREA_PADDING_RATIO = 0.8
+
+const LANDMARK_LABEL_OFFSETS = {
+  1: [-40, 0],
+  2: [-10, 0],
+  3: [55, -2],
+  4: [-20, 0],
+  5: [10, 0],
+  6: [55, 0],
+  7: [-10, -2],
+  8: [30, 2],
+  9: [30, -10],
+  10: [10, 0],
+  11: [-55, 0],
+  12: [-35, 0]
+}
+
+const getLandmarkBounds = () => {
+  const coordinates = props.landmarks
+    .map(landmark => landmark.coordinates)
+    .filter(point => Array.isArray(point) && point.length === 2)
+
+  return coordinates.length ? L.latLngBounds(coordinates) : null
+}
+
+const cross = (origin, a, b) => (
+  (a[1] - origin[1]) * (b[0] - origin[0]) -
+  (a[0] - origin[0]) * (b[1] - origin[1])
+)
+
+const getConvexHull = (coordinates) => {
+  const points = coordinates
+    .map(([lat, lng]) => [lat, lng])
+    .sort((a, b) => a[1] - b[1] || a[0] - b[0])
+
+  if (points.length < 3) return points
+
+  const lower = []
+  points.forEach((point) => {
+    while (lower.length >= 2 && cross(lower[lower.length - 2], lower[lower.length - 1], point) <= 0) {
+      lower.pop()
+    }
+    lower.push(point)
+  })
+
+  const upper = []
+  for (let index = points.length - 1; index >= 0; index -= 1) {
+    const point = points[index]
+    while (upper.length >= 2 && cross(upper[upper.length - 2], upper[upper.length - 1], point) <= 0) {
+      upper.pop()
+    }
+    upper.push(point)
+  }
+
+  lower.pop()
+  upper.pop()
+  return lower.concat(upper)
+}
+
+const getGuideArea = () => {
+  const coordinates = props.landmarks
+    .map(landmark => landmark.coordinates)
+    .filter(point => Array.isArray(point) && point.length === 2)
+  const hull = getConvexHull(coordinates)
+
+  if (hull.length < 3) return []
+
+  const center = hull.reduce(
+    (sum, [lat, lng]) => [sum[0] + lat / hull.length, sum[1] + lng / hull.length],
+    [0, 0]
+  )
+
+  return hull.map(([lat, lng]) => [
+    center[0] + (lat - center[0]) * (1 + GUIDE_AREA_PADDING_RATIO),
+    center[1] + (lng - center[1]) * (1 + GUIDE_AREA_PADDING_RATIO)
+  ])
+}
+
+const addGuideArea = () => {
+  const guideArea = getGuideArea()
+  if (!map || guideArea.length < 3) return
+
+  guideAreaLayer = L.polygon(guideArea, {
+    pane: 'guideAreaPane',
+    interactive: false,
+    color: '#17633f',
+    weight: 2.5,
+    opacity: 0.82,
+    dashArray: '8 6',
+    fillColor: '#17633f',
+    fillOpacity: 0.09
+  }).addTo(map)
+
+  const center = guideAreaLayer.getCenter()
+  const southwestPoint = guideArea.reduce((candidate, point) => (
+    point[0] + point[1] < candidate[0] + candidate[1] ? point : candidate
+  ), guideArea[0])
+  const labelPosition = [
+    center.lat * 0.14 + southwestPoint[0] * 0.86,
+    center.lng * 0.14 + southwestPoint[1] * 0.86
+  ]
+
+  guideAreaLabel = L.tooltip({
+    pane: 'guideAreaLabelPane',
+    permanent: true,
+    direction: 'center',
+    className: 'tour-map-guide-label',
+    interactive: false,
+    opacity: 1
+  })
+    .setLatLng(labelPosition)
+    .setContent('<strong>蒋巷村导览范围</strong><small>非行政边界</small>')
+    .addTo(map)
+}
 
 const categoryMeta = (category) => props.categories.find(item => item.value === category) || {
   label: category,
@@ -101,24 +221,40 @@ const createIcon = (category) => {
     `,
     iconSize: [34, 34],
     iconAnchor: [17, 17],
-    popupAnchor: [0, -20]
+    popupAnchor: [0, -20],
+    tooltipAnchor: [0, -17]
   })
 }
 
 const initMap = () => {
   if (!mapRef.value) return
 
+  const landmarkBounds = getLandmarkBounds()
+  const maxBounds = landmarkBounds?.pad(MAX_BOUNDS_PADDING_RATIO)
+
   map = L.map(mapRef.value, {
     center: props.center,
     zoom: props.zoom,
+    minZoom: MAP_MIN_ZOOM,
+    maxZoom: MAP_MAX_ZOOM,
+    maxBounds,
+    maxBoundsViscosity: 1,
     scrollWheelZoom: true
   })
 
+  map.createPane('guideAreaPane')
+  map.getPane('guideAreaPane').style.zIndex = 350
+  map.getPane('guideAreaPane').style.pointerEvents = 'none'
+  map.createPane('guideAreaLabelPane')
+  map.getPane('guideAreaLabelPane').style.zIndex = 425
+  map.getPane('guideAreaLabelPane').style.pointerEvents = 'none'
+
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors',
-    maxZoom: 19
+    maxZoom: MAP_MAX_ZOOM
   }).addTo(map)
 
+  addGuideArea()
   markersLayer = L.layerGroup().addTo(map)
   addMarkers()
 }
@@ -128,6 +264,7 @@ const addMarkers = () => {
   markersLayer.clearLayers()
 
   props.filteredLandmarks.forEach((landmark) => {
+    const labelOffset = LANDMARK_LABEL_OFFSETS[landmark.id] || [0, 0]
     const marker = L.marker(landmark.coordinates, {
       icon: createIcon(landmark.category),
       title: landmark.name
@@ -147,6 +284,14 @@ const addMarkers = () => {
     `
 
     marker.bindPopup(popupContent, { maxWidth: 280 })
+    marker.bindTooltip(landmark.name, {
+      permanent: true,
+      direction: 'top',
+      offset: L.point(labelOffset[0], labelOffset[1]),
+      className: 'tour-map-landmark-label',
+      interactive: false,
+      opacity: 1
+    })
     marker.on('click', () => {
       emit('select-landmark', landmark)
     })
@@ -379,6 +524,64 @@ watch(() => props.selectedLandmark, (newVal) => {
   :global(.tour-map-marker:hover .tour-map-marker__shape) {
     transform: translateY(-2px) scale(1.08);
     filter: drop-shadow(0 5px 6px rgba(20, 45, 29, 0.4));
+  }
+
+  :global(.tour-map-guide-label) {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 5px 9px;
+    border: 1px solid rgba(23, 99, 63, 0.24);
+    border-radius: 6px;
+    background: rgba(250, 252, 249, 0.94);
+    box-shadow: none;
+    color: #17633f;
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
+
+    strong {
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    small {
+      color: #6b7f72;
+      font-size: 0.62rem;
+    }
+  }
+
+  :global(.tour-map-guide-label::before) {
+    display: none;
+  }
+
+  :global(.tour-map-landmark-label) {
+    padding: 3px 7px;
+    border: 1px solid rgba(23, 99, 63, 0.18);
+    border-radius: 5px;
+    background: rgba(252, 253, 250, 0.94);
+    box-shadow: 0 1px 3px rgba(20, 45, 29, 0.08);
+    color: #244c35;
+    font-size: 0.76rem;
+    font-weight: 600;
+    line-height: 1.25;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  :global(.tour-map-landmark-label::before) {
+    border-top-color: rgba(252, 253, 250, 0.94);
+  }
+
+  @media (max-width: 480px) {
+    :global(.tour-map-landmark-label) {
+      padding: 2px 5px;
+      font-size: 0.68rem;
+    }
+
+    :global(.tour-map-guide-label) {
+      padding: 4px 7px;
+    }
   }
 }
 </style>

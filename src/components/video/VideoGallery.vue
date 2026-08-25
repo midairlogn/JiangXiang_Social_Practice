@@ -5,6 +5,16 @@
       <div class="video-gallery__info">
         <h3 class="video-gallery__title">{{ currentVideo.title }}</h3>
         <p class="video-gallery__desc">{{ currentVideo.desc }}</p>
+        <a
+          v-if="currentVideo.embedUrl && currentVideo.externalUrl"
+          class="video-gallery__external-action"
+          :href="currentVideo.externalUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ currentVideo.externalAction || '前往官方页面观看' }}
+          <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </div>
 
@@ -24,7 +34,13 @@
               <el-icon :size="32"><VideoPlay /></el-icon>
             </div>
             <span class="video-gallery__badge" v-if="video.isLocal">本地</span>
-            <span class="video-gallery__badge video-gallery__badge--external" v-else>{{ video.sourceLabel || '外部' }}</span>
+            <span
+              v-else
+              class="video-gallery__badge video-gallery__badge--external"
+              :class="{ 'video-gallery__badge--featured': video.featured }"
+            >
+              {{ video.featured ? '团队作品' : (video.sourceLabel || '外部') }}
+            </span>
           </div>
           <div class="video-gallery__card-info">
             <h5>{{ video.title }}</h5>
@@ -81,6 +97,25 @@ defineEmits(['select'])
     margin-bottom: 1.5rem;
     line-height: 1.7;
     font-size: 0.95rem;
+  }
+
+  &__external-action {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1.1rem;
+    border-radius: 999px;
+    background: #1f6d3d;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+
+    &:hover {
+      background: #16482b;
+      transform: translateY(-1px);
+    }
   }
 
   &__list-title {
@@ -155,6 +190,10 @@ defineEmits(['select'])
 
     &--external {
       background: #6b7280;
+    }
+
+    &--featured {
+      background: #d4a017;
     }
   }
 
