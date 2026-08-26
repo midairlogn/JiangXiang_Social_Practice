@@ -72,7 +72,7 @@
             <div class="product-showcase__packaging-placeholder">
               <span aria-hidden="true">🎨</span>
               <div>
-                <strong>原创包装视觉待补充</strong>
+                <strong>包装视觉方案</strong>
                 <p>{{ selectedProduct.packagingPlan }}</p>
               </div>
             </div>

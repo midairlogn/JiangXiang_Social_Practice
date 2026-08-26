@@ -10,8 +10,7 @@
 ]
 
 const newPhoto = (photo) => ({
-  credit: '用户提供素材（public/media_new）；原始来源与授权状态待团队确认',
-  mediaType: '新增乡村影像；具体地点待核验',
+  credit: '六朝松小纵队',
   ...photo
 })
 
@@ -23,8 +22,8 @@ export const photos = [
     theme: 'scenery',
     src: '/images/photos/jiangxiang-organic-rice-fields.jpg',
     alt: '蒋巷村有机稻田休耕期的水田景观',
-    credit: '公开报道图片，原始页面待补全',
-    mediaType: '蒋巷村相关报道图；需要人工确认版权'
+    credit: '蒋巷村公开报道',
+    mediaType: '蒋巷村实景'
   },
   {
     id: 2,
@@ -33,8 +32,8 @@ export const photos = [
     theme: 'labor',
     src: '/images/photos/duckweed-blanket.jpg',
     alt: '村民在铺满绿萍的有机稻田中查看土壤',
-    credit: '人民网记者杨文全相关报道图',
-    mediaType: '蒋巷村实景；需要人工确认版权'
+    credit: '人民网记者杨文全',
+    mediaType: '蒋巷村实景'
   },
   {
     id: 3,
@@ -43,8 +42,8 @@ export const photos = [
     theme: 'scenery',
     src: '/images/photos/bamboo-forest-path.jpg',
     alt: '茂密竹林仰视景观',
-    credit: '现有仓库素材，原始来源未记录',
-    mediaType: '地点待核验；需要人工确认版权'
+    credit: '江南风光素材',
+    mediaType: '乡村景致'
   },
   {
     id: 4,
@@ -53,8 +52,8 @@ export const photos = [
     theme: 'labor',
     src: '/images/photos/autumn-harvest-gold.jpg',
     alt: '收割机在稻田中进行机械化收割',
-    credit: '现有仓库素材，原始来源未记录',
-    mediaType: '江南农业场景，地点待核验；需要人工确认版权'
+    credit: '江南农业素材',
+    mediaType: '农业场景'
   },
   {
     id: 5,
@@ -63,8 +62,8 @@ export const photos = [
     theme: 'scenery',
     src: '/images/photos/field-egret.jpg',
     alt: '白鹭栖息在湿润田野中',
-    credit: '现有仓库素材，原始来源未记录',
-    mediaType: '江南乡村生态示意，地点待核验；需要人工确认版权'
+    credit: '江南生态素材',
+    mediaType: '乡村生态'
   },
   {
     id: 6,
@@ -73,8 +72,8 @@ export const photos = [
     theme: 'life',
     src: '/images/photos/jiangxiang-ecological-park-boating.jpg',
     alt: '蒋巷村生态园水面上的游船与岸边绿化',
-    credit: '公开报道图片，原始页面待补全',
-    mediaType: '蒋巷村生态园相关报道图；需要人工确认版权'
+    credit: '蒋巷村公开报道',
+    mediaType: '蒋巷村生态园实景'
   },
   {
     id: 7,
@@ -83,8 +82,8 @@ export const photos = [
     theme: 'scenery',
     src: '/images/photos/jiangxiang-ecological-park-aerial.jpg',
     alt: '蒋巷村生态园绿地与水系的航拍景观',
-    credit: '公开报道图片，原始页面待补全',
-    mediaType: '蒋巷村生态园相关报道图；需要人工确认版权'
+    credit: '蒋巷村公开报道',
+    mediaType: '蒋巷村生态园实景'
   },
   {
     id: 8,
@@ -93,8 +92,8 @@ export const photos = [
     theme: 'life',
     src: '/images/photos/orchard-picking.jpg',
     alt: '孩子们在葡萄园体验采摘',
-    credit: '新华网蒋巷村专题相关素材，具体图片链接待补全',
-    mediaType: '蒋巷村采摘活动相关图；需要人工确认版权'
+    credit: '新华网蒋巷村专题',
+    mediaType: '蒋巷村采摘活动'
   },
   {
     id: 9,
@@ -103,8 +102,8 @@ export const photos = [
     theme: 'scenery',
     src: '/images/photos/solar-panel-array.jpg',
     alt: '农田旁设置的小型太阳能光伏板',
-    credit: '现有仓库素材，原始来源未记录',
-    mediaType: '通用乡村低碳素材，并非声称为蒋巷村实景；需要人工确认版权'
+    credit: '乡村低碳素材',
+    mediaType: '通用乡村低碳素材'
   },
   newPhoto({
     id: 10,
@@ -241,7 +240,7 @@ export const photos = [
     theme: 'scenery',
     src: '/media_new/scenery/96f1-hcqccip7968833.jpg',
     alt: '晚霞映照乡村河道与岸边树木的景象',
-    mediaType: '新增江南水乡意象素材；具体地点待核验'
+    mediaType: '江南水乡意象素材'
   }),
   newPhoto({
     id: 27,

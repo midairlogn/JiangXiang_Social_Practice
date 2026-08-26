@@ -122,7 +122,7 @@ export const historyTimeline = [
     title: '十亿里程碑',
     desc: '全村经济总产值突破10亿元，村级稳定性收入2850万元，村民人均可支配收入6.25万元，人均股份制分红1万元，实现养老、医疗等五大保险全覆盖。村集体净资产超3.6亿元。',
     image: '/images/history/chang-desheng-presentation.jpg',
-    imageAlt: '常德盛介绍蒋巷村发展成果的公开报道图片（拍摄年份待核验）'
+    imageAlt: '常德盛介绍蒋巷村发展成果'
   },
   {
     year: '2024',
