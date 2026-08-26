@@ -59,7 +59,7 @@ All core features are built and the project compiles successfully (`npm run buil
 
 ```bash
 npm install          # Install dependencies
-npm run dev          # Start dev server (default http://localhost:5173)
+npm run dev          # Start dev server (default http://localhost:5162)
 npm run dev -- --port 8080   # Start on a custom port (or set PORT env var)
 npm run build        # Production build → dist/
 npm run preview      # Preview production build

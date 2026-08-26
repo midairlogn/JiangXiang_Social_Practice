@@ -11,7 +11,7 @@ export default defineConfig({
   },
   base: './',
   server: {
-    port: Number(process.env.PORT) || 5173,
+    port: Number(process.env.PORT) || 5162,
     open: true
   },
   build: {

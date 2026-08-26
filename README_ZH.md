@@ -64,14 +64,14 @@ npm install
 npm run dev
 ```
 
-网站将在 `http://localhost:5173` 启动。
+网站将在 `http://localhost:5162` 启动。
 
 #### 自定义端口
 
 设置 `PORT` 环境变量（全平台通用）或使用 Vite 的 `--port` 参数：
 
 ```bash
-# 环境变量（默认 5173）
+# 环境变量（默认 5162）
 # macOS/Linux:  PORT=8080 npm run dev
 # Windows (PS): $env:PORT=8080; npm run dev
 
