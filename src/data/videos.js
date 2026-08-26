@@ -1,16 +1,23 @@
-﻿export const videos = [
-  {
-    id: 1,
-    title: '蒋巷村社会实践',
-    src: '/videos/jiangxiang-social-practice.mp4',
-    poster: '/images/posters/social-practice.jpg',
-    duration: '社会实践',
-    category: 'main',
-    desc: '一部展示蒋巷村社会实践经历的纪录片——探索村庄从贫困沼泽到乡村振兴典范的蜕变历程。',
-    isLocal: true
-  },
+export const videos = [
   {
     id: 2,
+    title: '《蒋巷·蝶变》',
+    src: '',
+    embedUrl: 'https://player.bilibili.com/player.html?bvid=BV1Yvgs6QE9D&autoplay=0',
+    bvid: 'BV1Yvgs6QE9D',
+    poster: '/background/cover_image.png',
+    posterAlt: '《蒋巷·蝶变》社会实践宣传视频水墨封面',
+    duration: '团队社会实践宣传视频',
+    category: 'practice',
+    desc: '东南大学“六朝松小纵队”暑期社会实践宣传视频',
+    isLocal: false,
+    externalUrl: 'https://www.bilibili.com/video/BV1Yvgs6QE9D/',
+    sourceLabel: '哔哩哔哩',
+    externalAction: '前往哔哩哔哩观看',
+    featured: true
+  },
+  {
+    id: 1,
     title: '《焦点访谈》：蒋巷村的好书记',
     src: '',
     poster: '/images/history/chang-desheng-presentation.jpg',
@@ -27,6 +34,6 @@
 
 export const videoCategories = [
   { value: 'all', label: '全部视频' },
-  { value: 'main', label: '社会实践' },
+  { value: 'practice', label: '实践成果' },
   { value: 'story', label: '人物故事' }
 ]

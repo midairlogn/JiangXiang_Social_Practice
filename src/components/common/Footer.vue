@@ -60,7 +60,11 @@ const year = computed(() => new Date().getFullYear())
 
 <style scoped lang="scss">
 .footer {
-  background: linear-gradient(135deg, #16482b 0%, #0f3a21 100%);
+  background-color: #0f3a21;
+  background-image: var(--bg-dark-green-ink);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: rgba(255, 255, 255, 0.85);
   padding: 3rem 0 1.5rem;
 

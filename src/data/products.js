@@ -10,6 +10,8 @@
     features: ['有机认证', '稻鸭鹅共作', '绿萍天然肥料', '一季轮作制'],
     images: ['/images/products/organic-rice.jpg'],
     imageAlt: '白米近景（通用产品示意）',
+    mediaNote: '通用农产品示意图，并非蒋巷村产品实拍；需要人工确认版权。',
+    packagingPlan: '策划方向：环保牛皮纸材质、金黄稻田色系，并呈现有机认证与农业传承信息。原创视觉稿待团队设计。'
   },
   {
     id: 2,
@@ -22,13 +24,15 @@
     features: ['有机堆肥', '每日采摘', '可采摘体验', '循环经济产品'],
     images: [
       '/images/products/green-vegetables.jpg',
-      '/media_new/product-showcase/cherry-tomatoes-vine.webp'
+      '/media_new/product-showcase/OIP-C.webp'
     ],
     imageAlt: '南方市场常见绿色蔬菜（通用产品示意）',
     imageAlts: [
       '南方市场常见绿色蔬菜（通用产品示意）',
       '藤蔓上处于不同成熟阶段的小番茄'
     ],
+    mediaNote: '通用南方农业素材，并非蒋巷村蔬菜实拍；需要人工确认版权。',
+    packagingPlan: '策划方向：透气、可回收的绿色包装，突出每日采摘与循环农业信息。原创视觉稿待团队设计。'
   },
   {
     id: 3,
@@ -41,6 +45,8 @@
     features: ['有机大米为基', '传统酿造', '江南风味', '手工制作'],
     images: ['/images/products/rice-wine.jpg'],
     imageAlt: '传统酒坛场景（通用产品示意）',
+    mediaNote: '通用江南酒类意象，并非蒋巷米酒实拍；需要人工确认版权。',
+    packagingPlan: '策划方向：陶瓷酒器、江南书法与青白色系，强调传统酿造。原创视觉稿待团队设计。'
   },
   {
     id: 4,
@@ -53,6 +59,8 @@
     features: ['荷塘采摘', '自然晾干', '养生茶饮', '无咖啡因'],
     images: ['/images/products/lotus-seed-tea.jpg'],
     imageAlt: '花草茶冲泡场景（通用产品示意）',
+    mediaNote: '通用茶饮素材，并非蒋巷莲子茶实拍；需要人工确认版权。',
+    packagingPlan: '策划方向：简洁抽屉盒与荷花水彩元素，突出清雅、自然的茶饮气质。原创视觉稿待团队设计。'
   },
   {
     id: 5,
@@ -65,13 +73,15 @@
     features: ['果园种植', '树上成熟', '采摘体验', '时令品种'],
     images: [
       '/images/products/seasonal-fruits.jpg',
-      '/media_new/product-showcase/seasonal-fruits-basket.webp'
+      '/media_new/product-showcase/OIP-C (2).webp'
     ],
     imageAlt: '多种时令水果（通用产品示意）',
     imageAlts: [
       '多种时令水果（通用产品示意）',
       '果篮中集中陈列的黄色时令水果'
     ],
+    mediaNote: '通用水果素材，并非蒋巷村果园实拍；需要人工确认版权。',
+    packagingPlan: '策划方向：可循环果箱与四季果实插画，方便采摘和短途运输。原创视觉稿待团队设计。'
   },
   {
     id: 6,
@@ -84,6 +94,8 @@
     features: ['江苏省名牌', '五连冠金钢奖', '覆盖20+省份', '亿元级企业'],
     images: ['/images/products/steel-components.jpg'],
     imageAlt: '钢结构建筑构件（通用产业示意）',
+    mediaNote: '通用钢结构素材，并非常盛集团厂区或产品实拍；需要人工确认版权。',
+    packagingPlan: '策划方向：工业运输标识、品牌色带与规格信息分区，适用于钢构件运输包装。原创视觉稿待团队设计。'
   }
 ]
 

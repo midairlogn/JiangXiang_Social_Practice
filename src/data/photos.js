@@ -111,7 +111,7 @@ export const photos = [
     title: '社区志愿服务',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/labor/community-volunteer-service.webp',
+    src: '/media_new/labor/afsaf.webp',
     alt: '志愿者在村道旁与居民交流服务事项'
   }),
   newPhoto({
@@ -119,7 +119,7 @@ export const photos = [
     title: '传统农具陈列',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/labor/traditional-farm-tools-display.webp',
+    src: '/media_new/labor/OIP-C (1).webp',
     alt: '乡村展陈空间中的传统农具与生活器具'
   }),
   newPhoto({
@@ -127,7 +127,7 @@ export const photos = [
     title: '春日田间播种',
     season: 'spring',
     theme: 'labor',
-    src: '/media_new/labor/spring-field-sowing.webp',
+    src: '/media_new/labor/OIP-C (2).webp',
     alt: '劳动者在春季田块中进行播种作业'
   }),
   newPhoto({
@@ -135,7 +135,7 @@ export const photos = [
     title: '水稻田间管护',
     season: 'summer',
     theme: 'labor',
-    src: '/media_new/labor/rice-field-care.webp',
+    src: '/media_new/labor/OIP-C (3).webp',
     alt: '戴草帽的劳动者在水稻田中进行田间管护'
   }),
   newPhoto({
@@ -143,7 +143,7 @@ export const photos = [
     title: '稻田机械收获',
     season: 'autumn',
     theme: 'labor',
-    src: '/media_new/labor/mechanical-rice-harvest.webp',
+    src: '/media_new/labor/OIP-C (4).webp',
     alt: '收割机械在成片金黄稻田中作业的俯瞰景象'
   }),
   newPhoto({
@@ -151,7 +151,7 @@ export const photos = [
     title: '手工制作交流',
     season: 'year-round',
     theme: 'labor',
-    src: '/media_new/labor/handicraft-workshop.webp',
+    src: '/media_new/labor/OIP-C (5).webp',
     alt: '多人在室内共同参与手工制作活动'
   }),
   newPhoto({
@@ -159,7 +159,7 @@ export const photos = [
     title: '秋收作业现场',
     season: 'autumn',
     theme: 'labor',
-    src: '/media_new/labor/autumn-harvest-operation.webp',
+    src: '/media_new/labor/OIP-C (6).webp',
     alt: '农业机械在成熟稻田中推进收获作业'
   }),
   newPhoto({
@@ -167,7 +167,7 @@ export const photos = [
     title: '日常烹饪劳作',
     season: 'year-round',
     theme: 'labor',
-    src: '/media_new/labor/village-kitchen-cooking.webp',
+    src: '/media_new/labor/OIP-C (7).webp',
     alt: '两人在乡村厨房中共同进行食物烹饪'
   }),
   newPhoto({
@@ -175,7 +175,7 @@ export const photos = [
     title: '春耕整田',
     season: 'spring',
     theme: 'labor',
-    src: '/media_new/labor/spring-plowing-tractor.webp',
+    src: '/media_new/labor/OIP-C (8).webp',
     alt: '拖拉机在湿润田块中进行春耕整地作业'
   }),
   newPhoto({
@@ -183,7 +183,7 @@ export const photos = [
     title: '传统织造技艺',
     season: 'year-round',
     theme: 'labor',
-    src: '/media_new/labor/traditional-weaving.webp',
+    src: '/media_new/labor/OIP-C.webp',
     alt: '劳动者操作传统织机进行手工织造'
   }),
   newPhoto({
@@ -191,7 +191,7 @@ export const photos = [
     title: '乡村入口景观',
     season: 'year-round',
     theme: 'scenery',
-    src: '/media_new/scenery/village-entrance-landscape.jpg',
+    src: '/media_new/scenery/10030v000000k41im407D_C_300_300.jpg',
     alt: '具有传统建筑风格的乡村公共空间入口'
   }),
   newPhoto({
@@ -199,7 +199,7 @@ export const photos = [
     title: '临水村居',
     season: 'summer',
     theme: 'scenery',
-    src: '/media_new/scenery/riverside-village-houses.jpg',
+    src: '/media_new/scenery/11.jpg',
     alt: '绿树与花木环绕的江南临水村居景观'
   }),
   newPhoto({
@@ -207,7 +207,7 @@ export const photos = [
     title: '白墙庭院通道',
     season: 'spring',
     theme: 'scenery',
-    src: '/media_new/scenery/white-wall-courtyard-path.jpg',
+    src: '/media_new/scenery/21.jpg',
     alt: '白墙圆门、竹篱与绿植构成的庭院通道'
   }),
   newPhoto({
@@ -215,7 +215,7 @@ export const photos = [
     title: '春水与水禽',
     season: 'spring',
     theme: 'scenery',
-    src: '/media_new/scenery/spring-water-fowl.jpg',
+    src: '/media_new/scenery/28e15cb4021ced21213a9cdb.jpg',
     alt: '新柳掩映的乡村水面与游弋水禽'
   }),
   newPhoto({
@@ -223,7 +223,7 @@ export const photos = [
     title: '乡土院落陈设',
     season: 'year-round',
     theme: 'scenery',
-    src: '/media_new/scenery/rustic-courtyard-display.jpg',
+    src: '/media_new/scenery/32r.jpg',
     alt: '保留传统生活器具与农作元素的乡土院落'
   }),
   newPhoto({
@@ -231,7 +231,7 @@ export const photos = [
     title: '石桥与村舍',
     season: 'summer',
     theme: 'scenery',
-    src: '/media_new/scenery/stone-bridge-cottages.jpg',
+    src: '/media_new/scenery/4f.jpg',
     alt: '石板桥连接绿化水岸与乡村建筑'
   }),
   newPhoto({
@@ -239,7 +239,7 @@ export const photos = [
     title: '水岸晚霞',
     season: 'summer',
     theme: 'scenery',
-    src: '/media_new/scenery/riverside-sunset.jpg',
+    src: '/media_new/scenery/96f1-hcqccip7968833.jpg',
     alt: '晚霞映照乡村河道与岸边树木的景象',
     mediaType: '新增江南水乡意象素材；具体地点待核验'
   }),
@@ -248,7 +248,7 @@ export const photos = [
     title: '村中水巷',
     season: 'summer',
     theme: 'scenery',
-    src: '/media_new/scenery/village-water-alley.jpg',
+    src: '/media_new/scenery/CggYsVce1iiAdzHGAAIT55InlT8098.jpg',
     alt: '白墙村舍之间延伸的水巷与岸边绿化'
   }),
   newPhoto({
@@ -256,7 +256,7 @@ export const photos = [
     title: '村史文化空间',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/scenery/village-history-cultural-building.jpg',
+    src: '/media_new/scenery/ds.jpg',
     alt: '白墙灰瓦的乡村文化展陈建筑外观'
   }),
   newPhoto({
@@ -264,7 +264,7 @@ export const photos = [
     title: '水上游憩空间',
     season: 'summer',
     theme: 'life',
-    src: '/media_new/scenery/water-recreation-space.webp',
+    src: '/media_new/scenery/dv.webp',
     alt: '绿树与花带环绕的乡村水上游憩空间'
   }),
   newPhoto({
@@ -272,7 +272,7 @@ export const photos = [
     title: '夏日荷塘',
     season: 'summer',
     theme: 'scenery',
-    src: '/media_new/scenery/summer-lotus-pond.jpg',
+    src: '/media_new/scenery/f93c1cb9c028f402.jpg_r_640x853x70_a6adfdf1.jpg',
     alt: '水面铺满荷叶的夏日乡村荷塘'
   }),
   newPhoto({
@@ -280,7 +280,7 @@ export const photos = [
     title: '水网村落俯瞰',
     season: 'summer',
     theme: 'scenery',
-    src: '/media_new/scenery/water-network-village-aerial.jpg',
+    src: '/media_new/scenery/lhh.jpg',
     alt: '河道环绕村舍与绿地的江南村落俯瞰景观'
   }),
   newPhoto({
@@ -288,7 +288,7 @@ export const photos = [
     title: '水岸人家',
     season: 'summer',
     theme: 'scenery',
-    src: '/media_new/scenery/waterside-houses.jpg',
+    src: '/media_new/scenery/nsdfohfl.jpg',
     alt: '村舍、树木与水面倒影构成的安静水岸景象'
   }),
   newPhoto({
@@ -296,7 +296,7 @@ export const photos = [
     title: '花木景观造型',
     season: 'autumn',
     theme: 'scenery',
-    src: '/media_new/scenery/floral-landscape-sculpture.webp',
+    src: '/media_new/scenery/OIP-C (.webp',
     alt: '黄色花木与绿植组合成的乡村景观造型'
   }),
   newPhoto({
@@ -304,7 +304,7 @@ export const photos = [
     title: '绿树环抱的村居',
     season: 'year-round',
     theme: 'scenery',
-    src: '/media_new/scenery/tree-surrounded-village.webp',
+    src: '/media_new/scenery/OIP.webp',
     alt: '成片绿树环抱整齐村居的俯瞰景观'
   }),
   newPhoto({
@@ -312,7 +312,7 @@ export const photos = [
     title: '林荫长廊',
     season: 'summer',
     theme: 'scenery',
-    src: '/media_new/scenery/vine-shaded-corridor.jpg',
+    src: '/media_new/scenery/r.jpg',
     alt: '藤蔓覆盖的乡村林荫长廊与步道'
   }),
   newPhoto({
@@ -320,7 +320,7 @@ export const photos = [
     title: '绿化村居',
     season: 'spring',
     theme: 'scenery',
-    src: '/media_new/scenery/green-village-residences.jpg',
+    src: '/media_new/scenery/t01cde8a7523775c3bb.jpg',
     alt: '草坪、树木与整洁住宅构成的乡村居住环境'
   }),
   newPhoto({
@@ -328,15 +328,23 @@ export const photos = [
     title: '树影下的民居',
     season: 'year-round',
     theme: 'scenery',
-    src: '/media_new/scenery/tree-shadow-village-houses.jpg',
+    src: '/media_new/scenery/W020230530572632448315.jpg',
     alt: '树影掩映下整洁有序的乡村住宅外观'
+  }),
+  newPhoto({
+    id: 38,
+    title: '生态景观俯瞰',
+    season: 'summer',
+    theme: 'scenery',
+    src: '/media_new/scenery/scenery-reference.jpg',
+    alt: '水系、绿地与村落相互交织的生态景观俯瞰图'
   }),
   newPhoto({
     id: 39,
     title: '林下漫步',
     season: 'summer',
     theme: 'life',
-    src: '/media_new/village-life/forest-boardwalk-stroll.jpg',
+    src: '/media_new/village-life/6cf9d79655b386f7.jpg_r_720x480x95_0e014a6b.jpg',
     alt: '行人在林木与花草环绕的木栈道上漫步'
   }),
   newPhoto({
@@ -344,7 +352,7 @@ export const photos = [
     title: '乡村阅读空间',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/village-reading-room.webp',
+    src: '/media_new/village-life/awfag.webp',
     alt: '设有书架、座椅与阅读灯的乡村公共阅读空间'
   }),
   newPhoto({
@@ -352,7 +360,7 @@ export const photos = [
     title: '林间亲子游乐',
     season: 'summer',
     theme: 'life',
-    src: '/media_new/village-life/forest-family-recreation.webp',
+    src: '/media_new/village-life/ddddd.webp',
     alt: '儿童与家人在林间体验户外游乐活动'
   }),
   newPhoto({
@@ -360,7 +368,7 @@ export const photos = [
     title: '稻米文化陈设',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/rice-culture-display.webp',
+    src: '/media_new/village-life/de.webp',
     alt: '以稻米文字元素呈现乡村农业文化的展陈'
   }),
   newPhoto({
@@ -368,7 +376,7 @@ export const photos = [
     title: '村级公共服务空间',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/village-public-service-center.webp',
+    src: '/media_new/village-life/kklj.webp',
     alt: '村级党群服务中心入口与公共服务标识'
   }),
   newPhoto({
@@ -376,7 +384,7 @@ export const photos = [
     title: '长者关怀服务',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/elderly-care-service.webp',
+    src: '/media_new/village-life/OIP-C (1).webp',
     alt: '社区工作人员与多位老人围坐交流'
   }),
   newPhoto({
@@ -384,7 +392,7 @@ export const photos = [
     title: '水杉林荫道',
     season: 'summer',
     theme: 'scenery',
-    src: '/media_new/village-life/dawn-redwood-shaded-path.webp',
+    src: '/media_new/village-life/OIP-C (2).webp',
     alt: '高大水杉与花带围合的乡村林荫步道'
   }),
   newPhoto({
@@ -392,7 +400,7 @@ export const photos = [
     title: '传统学堂陈设',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/traditional-schoolhouse-display.webp',
+    src: '/media_new/village-life/OIP-C (3).webp',
     alt: '木质桌椅与匾额构成的传统学堂展陈空间'
   }),
   newPhoto({
@@ -400,7 +408,7 @@ export const photos = [
     title: '乡村参观交流',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/village-tour-exchange.webp',
+    src: '/media_new/village-life/OIP-C (4).webp',
     alt: '多人在户外乡村空间开展参观交流活动'
   }),
   newPhoto({
@@ -408,7 +416,7 @@ export const photos = [
     title: '社区美食活动',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/community-food-event.webp',
+    src: '/media_new/village-life/OIP-C (5).webp',
     alt: '公共活动中集中摆放的多种乡村餐食'
   }),
   newPhoto({
@@ -416,7 +424,7 @@ export const photos = [
     title: '文化展览参观',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/cultural-exhibition-visit.webp',
+    src: '/media_new/village-life/OIP-C (6).webp',
     alt: '参观者在室内文化展览空间观看影像与展品'
   }),
   newPhoto({
@@ -424,7 +432,7 @@ export const photos = [
     title: '集体参访留影',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/group-visit-photo.webp',
+    src: '/media_new/village-life/OIP-C.webp',
     alt: '参访群体在公共文化建筑前合影留念'
   }),
   newPhoto({
@@ -432,7 +440,7 @@ export const photos = [
     title: '书香文化一角',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/scholar-culture-corner.jpg',
+    src: '/media_new/village-life/sd.jpg',
     alt: '以书院文字和阅读元素布置的乡村文化空间'
   }),
   newPhoto({
@@ -440,7 +448,7 @@ export const photos = [
     title: '乡土文化院落',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/rustic-culture-courtyard.jpg',
+    src: '/media_new/village-life/Xx1IbI.jpg',
     alt: '融入传统农居风格的乡土文化展示院落'
   }),
   newPhoto({
@@ -448,7 +456,7 @@ export const photos = [
     title: '公共文化活动',
     season: 'year-round',
     theme: 'life',
-    src: '/media_new/village-life/public-cultural-activity.webp',
+    src: '/media_new/village-life/yuytoii.webp',
     alt: '村民在礼堂中参加公共文化交流活动'
   }),
   newPhoto({
@@ -456,7 +464,7 @@ export const photos = [
     title: '冬日迎福留影',
     season: 'winter',
     theme: 'life',
-    src: '/media_new/winter/winter-fu-blessing-photo.webp',
+    src: '/media_new/winter/OIP.webp',
     alt: '身着冬装的老人和孩子手持福字合影'
   }),
   newPhoto({
@@ -464,7 +472,7 @@ export const photos = [
     title: '岁末围桌相聚',
     season: 'winter',
     theme: 'life',
-    src: '/media_new/winter/year-end-gathering.webp',
+    src: '/media_new/winter/OIP (2).webp',
     alt: '身着冬装的人们围桌举杯相聚'
   }),
   newPhoto({
@@ -472,7 +480,7 @@ export const photos = [
     title: '冬日乡邻聚餐',
     season: 'winter',
     theme: 'life',
-    src: '/media_new/winter/winter-neighborhood-dinner.webp',
+    src: '/media_new/winter/OIP (3).webp',
     alt: '乡邻穿着厚外套在冬日暖阳下围桌用餐'
   })
 ]

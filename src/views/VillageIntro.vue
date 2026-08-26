@@ -97,12 +97,24 @@ const activeTab = ref('history')
 <style scoped lang="scss">
 .village-page {
   &__header {
-    background: linear-gradient(135deg, #1f6d3d, #16482b);
+    background-color: #16482b;
+    background-image: var(--bg-dark-green-ink);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff;
     padding: calc(64px + 3rem) 0 2rem;
 
     .section-title { color: #fff; }
     .section-subtitle { color: rgba(255, 255, 255, 0.7); }
+  }
+
+  &__content {
+    background-color: #f9fafb;
+    background-image: var(--bg-paper-ink);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__overview {
