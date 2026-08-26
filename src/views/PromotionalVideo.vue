@@ -3,7 +3,7 @@
     <section class="video-page__header">
       <div class="container">
         <h1 class="section-title">专题视频</h1>
-        <p class="section-subtitle">仅收录来源可核验的官方媒体视频页面</p>
+        <p class="section-subtitle">透过镜头，走进将巷</p>
       </div>
     </section>
 

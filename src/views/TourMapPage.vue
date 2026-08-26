@@ -3,7 +3,7 @@
     <section class="map-page__header">
       <div class="container">
         <h1 class="section-title">导览地图</h1>
-        <p class="section-subtitle">在交互式地图上探索蒋巷村12个地标景点</p>
+        <p class="section-subtitle">漫步地图，发现将巷十二景</p>
       </div>
     </section>
 

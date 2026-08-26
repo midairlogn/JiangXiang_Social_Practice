@@ -27,9 +27,6 @@
           <el-tab-pane label="美景摄影" name="photos">
             <h2 class="section-title">四季美景摄影</h2>
             <p class="section-subtitle">按四季与主题分类，呈现生活、景致与劳动之美</p>
-            <p class="features-page__media-notice">
-              已核验的蒋巷村报道图、地点待核验图片和通用示意素材均已在图片详情中明确标注。
-            </p>
             <PhotoGallery
               :photos="store.allPhotos"
               :themes="store.photoThemeList"
@@ -162,12 +159,5 @@ const filteredPhotos = computed(() => {
     }
   }
 
-  &__media-notice {
-    max-width: 820px;
-    margin: -1.5rem auto 2rem;
-    font-size: 0.82rem;
-    line-height: 1.6;
-    text-align: center;
-  }
 }
 </style>

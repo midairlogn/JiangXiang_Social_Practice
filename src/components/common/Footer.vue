@@ -43,10 +43,7 @@
       </div>
 
       <div class="footer__bottom">
-        <p>
-          © {{ year }} 六朝松小纵队 · 蒋巷村社会实践项目。基于 Vue 3 构建。
-          <span class="footer__credit">内容来源于蒋巷村公开资料。</span>
-        </p>
+        <p>© {{ year }} 六朝松小纵队 · 蒋巷村社会实践项目</p>
       </div>
     </div>
   </footer>
