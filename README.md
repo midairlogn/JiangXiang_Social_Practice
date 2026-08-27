@@ -107,36 +107,36 @@ public/images/
 ├── history/       # Timeline images
 ├── landmarks/     # Map landmark images
 ├── photos/        # Photo gallery
-└── products/      # Product images; packaging artwork remains an original-design placeholder
+└── products/      # Product images
 ```
 
-The media inventory was audited in August 2026. Clearly unrelated images, misleading packaging images, duplicate physical files, and broken video references were removed. Retained images are classified as verified Jiangxiang-related reporting images, location-pending images, or generic illustrative assets.
+The media inventory was audited in August 2026. Clearly unrelated images, misleading packaging images, duplicate physical files, and broken video references were removed.
 
-See [MEDIA_SOURCES.md](MEDIA_SOURCES.md) for per-file provenance, copyright status, and items requiring human review. No online image should be added to the repository without recording its source and reuse status there.
+See [MEDIA_SOURCES.md](MEDIA_SOURCES.md) for per-file provenance and copyright status. No online image should be added to the repository without recording its source and reuse status there.
 
 ## Content Sources
 
 All textual content about Jiangxiang Village is based on publicly available sources, including:
 
-- People's Daily Online (en.people.cn)
+- People's Daily (people.com.cn)
 - Jiangsu Civil Affairs Bureau (mzt.jiangsu.gov.cn)
-- Suzhou English Portal (english.suzhou.gov.cn)
-- CCTV News (news.cntv.cn)
+- Suzhou Municipal Government (suzhou.gov.cn)
+- CCTV (cctv.com)
 - China Daily (chinadaily.com.cn)
 - Sina Finance (finance.sina.com.cn)
-- CNR Jiangsu (js.cnr.cn)
-- The Paper / Pengpai News (thepaper.cn)
+- CNR (cnr.cn)
+- The Paper (thepaper.cn)
 
-## Key Facts (2022–2024)
+## Key Facts (2024)
 
 | Metric | Value |
 |--------|-------|
 | Total output value | 1 billion yuan |
-| Per capita disposable income | 62,500 yuan |
+| Per capita disposable income | 68,000 yuan |
 | Collective net assets | 360 million yuan |
 | Green coverage | 60%+ |
-| Households | 192 |
-| Population | 875 |
+| Households | 200 |
+| Population | 878 |
 | Area | 3 km² |
 | National honors | ~100 |
 
