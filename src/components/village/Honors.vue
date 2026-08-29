@@ -54,7 +54,9 @@
       <el-tab-pane label="领导视察" name="visits">
         <div class="honors__visits">
           <div v-for="visit in visits" :key="visit.leader" class="honors__visit-card">
-            <div class="honors__visit-year">{{ visit.year }}</div>
+            <div class="honors__visit-year">
+              <span>{{ visit.year }}</span>
+            </div>
             <div class="honors__visit-body">
               <h4>{{ visit.leader }}</h4>
               <blockquote class="honors__quote">"{{ visit.quote }}"</blockquote>
@@ -249,34 +251,78 @@ const openModal = (honor) => {
 
   &__visit-card {
     display: flex;
-    gap: 1.5rem;
-    padding: 1.25rem;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    align-items: flex-start;
+    align-items: stretch;
+    border-left: 4px solid #d4a017;
+    transition: transform 0.25s, box-shadow 0.25s;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
   }
 
   &__visit-year {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #d4a017;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    span {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #d4a017;
+      background: #fef3c7;
+      border-radius: 10px;
+      padding: 0.5rem 0.6rem;
+      white-space: nowrap;
+      line-height: 1.3;
+      display: inline-block;
+    }
   }
 
-  &__visit-body h4 {
-    color: #1f6d3d;
-    font-size: 1.05rem;
-    margin-bottom: 2px;
+  &__visit-body {
+    flex: 1;
+    border-left: 2px solid #e5e7eb;
+    padding-left: 0.75rem;
+
+    h4 {
+      color: #1f6d3d;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__quote {
+    margin: 0;
     border-left: 3px solid #88cf9f;
     padding-left: 1rem;
     font-size: 0.9rem;
     color: #4b5563;
     font-style: italic;
     line-height: 1.6;
+  }
+
+  &__visit-card {
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 0.75rem;
+
+      .honors__visit-year {
+        width: 100%;
+
+        span { width: auto; }
+      }
+
+      .honors__visit-body {
+        border-left: none;
+        padding-left: 0;
+      }
+    }
   }
 
   &__modal {
